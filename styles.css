@@ -1,37 +1,35 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+/* Reset some default styles */
+body, html {
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
 }
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-}
-header nav ul {
-    list-style: none;
-}
-header nav ul li {
-    display: inline;
-    margin-left: 10px;
-}
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-section {
-    padding: 20px;
-    margin: 0 10px;
-    background: white;
-    border-radius: 8px;
-}
-footer {
-    text-align: center;
-    padding: 10px 20px;
-    background: #333;
+
+/* Styling the header */
+#top-nav {
+    background-color: #333; /* Dark background for the nav bar */
     color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#top-nav nav ul {
+    list-style-type: none; /* Removes default list styling */
+    padding: 0;
+}
+
+#top-nav nav ul li {
+    display: inline; /* Display links in a row */
+    margin-right: 20px; /* Space between the links */
+}
+
+#top-nav nav ul li a {
+    color: white; /* White text color */
+    text-decoration: none; /* Removes underline from links */
+    font-size: 16px; /* Sets a specific font size */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+#top-nav nav ul li a:hover {
+    color: #d100d1; /* Pink color on hover */
 }
