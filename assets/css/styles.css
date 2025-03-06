@@ -296,9 +296,11 @@ img {
 }
 
 .skill__button:hover {
-    background-color: #3A4DC9; /* A slightly darker blue instead of white */
+    background-color: #2F3EB1 !important;  /* A slightly darker blue */
+    color: white !important;  /* Keep text color unchanged */
     transition: background 0.3s ease-in-out;
 }
+
 
 
 
