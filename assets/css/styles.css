@@ -358,12 +358,23 @@ img {
 .work__img {
   width: 100%; /* Full width to the container */
   margin-bottom: 0.5rem; /* Space between the image and the title */
+  overflow: hidden; /* Prevents the image from overflowing its container when zooming */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition for zoom and opacity */
 }
 
 .work__img img {
   width: 100%; /* Image fills the width of its container */
   height: auto; /* Maintain image aspect ratio */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Ensures the transition is smooth */
+  transform-origin: center; /* Ensures the zoom effect is centered */
 }
+
+/* New hover effects */
+.work__img:hover img {
+  transform: scale(1.1); /* Scales the image up to create a zoom effect */
+  opacity: 0.5; /* Reduces the opacity to 50% */
+}
+
 
 .work__title {
   display: inline-block;
