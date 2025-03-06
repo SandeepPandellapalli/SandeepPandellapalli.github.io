@@ -340,48 +340,50 @@ img {
 }
 
 /* ===== PROJECTS BUTTON ===== */
+/* ===== PROJECTS SECTION STYLING ===== */
 .work__container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  align-items: start; /* Aligns items to the top */
-  margin-bottom: var(--mb-6); /* Adds space at the bottom of the section */
+  grid-template-columns: repeat(3, 1fr); /* 3 columns grid */
+  gap: 20px; /* Space between items */
+  align-items: start; /* Align items to the top of the container */
+  margin-bottom: var(--mb-6); /* Bottom margin for spacing */
 }
 
 .work__item {
   display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers the content within each item */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center align children */
 }
 
 .work__img {
-  width: 100%; /* Ensures the link area covers the image */
-  margin-bottom: 0.5rem; /* Space between image and title */
+  width: 100%; /* Full width to the container */
+  margin-bottom: 0.5rem; /* Space between the image and the title */
 }
 
 .work__img img {
-  width: 100%; /* Makes image fill the container */
-  height: auto; /* Maintains aspect ratio */
-}
-.work__title {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: var(--first-color); /* Use the same blue background */
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 6px; /* Rounded edges */
-    transition: background 0.3s ease-in-out;
-    text-align: center;
-    margin-top: 10px; /* Space between image and title */
-    font-size: var(--normal-font-size);
-}
-.work__title:hover {
-    background-color: #2E5BB0; /* Slightly different blue on hover */
-    color: inherit; /* Keeps the color the same as the non-hover state */
-    transition: background 0.3s;
+  width: 100%; /* Image fills the width of its container */
+  height: auto; /* Maintain image aspect ratio */
 }
 
+.work__title {
+  display: inline-block;
+  padding: 8px 16px; /* Padding around text */
+  background-color: var(--first-color); /* Primary color background */
+  color: white; /* Text color */
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px; /* Rounded corners */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
+  text-align: center; /* Center-align text */
+  margin-top: 10px; /* Margin top for spacing from image */
+  font-size: var(--normal-font-size); /* Font size */
+}
+
+.work__title:hover {
+  background-color: #2E5BB0; /* Darker shade of primary color on hover */
+  color: white; /* Text color remains unchanged */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
+}
 
 
 
