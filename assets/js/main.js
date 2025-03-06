@@ -53,5 +53,5 @@ const sr = ScrollReveal({
 
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text,skills__container, skills__list,skill__button ',{}); 
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
-sr.reveal('.home__social-icon' ,{ interval: 200}); 
+sr.reveal('.home__social-icon, .work__title' ,{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input, skills__container, skills__list,skill__button',{interval: 200}); 
