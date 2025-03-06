@@ -71,3 +71,28 @@ sr.reveal('.skill__button', {
     interval: 50, // Stagger each button to follow quickly after the heading
     delay: 600 // Starts revealing skills shortly after the heading is shown
 });
+
+
+document.querySelectorAll('.skill__button, .experience__link').forEach(item => {
+    item.addEventListener('mouseover', function() {
+        const skillType = this.dataset.subskill || this.dataset.experience;
+        highlightConnections(skillType);
+    });
+    item.addEventListener('mouseout', function() {
+        clearHighlights();
+    });
+});
+
+function highlightConnections(skillType) {
+    // Logic to highlight connected items
+    document.querySelectorAll(`[data-skill="${skillType}"]`).forEach(el => {
+        el.classList.add('active');
+    });
+}
+
+function clearHighlights() {
+    document.querySelectorAll('.active').forEach(el => {
+        el.classList.remove('active');
+    });
+}
+
