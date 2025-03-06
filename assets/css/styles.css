@@ -377,10 +377,11 @@ img {
     font-size: var(--normal-font-size);
 }
 .work__title:hover {
-    background-color: #2F3EB1; /* Slightly darker blue on hover */
-    color: white;
-    transition: background 0.3s ease-in-out;
+    background-color: #2E5BB0; /* Slightly different blue on hover */
+    color: inherit; /* Keeps the color the same as the non-hover state */
+    transition: background 0.3s;
 }
+
 
 
 
