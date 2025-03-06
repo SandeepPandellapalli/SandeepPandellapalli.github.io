@@ -342,6 +342,28 @@ img {
   margin-left: auto;
 }
 
+
+/* ===== RESUME BUTTON ===== */
+.resume__button {
+    display: block;
+    border: none;
+    outline: none;
+    font-size: var(--normal-font-size);
+    cursor: pointer;
+    margin-left: auto;
+    padding: 10px 20px;
+    background-color: var(--first-color); /* Same as Contact button */
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;  /* Rounded corners */
+    transition: background 0.3s ease-in-out;
+}
+
+.resume__button:hover {
+    background-color: var(--first-color-alt); /* Slightly darker on hover */
+}
+
 /* ===== FOOTER =====*/
 .footer {
   background-color: var(--second-color);
