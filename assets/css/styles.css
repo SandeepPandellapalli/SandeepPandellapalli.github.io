@@ -345,24 +345,28 @@ img {
 
 /* ===== RESUME BUTTON ===== */
 .resume__button {
-    display: block;
-    border: none;
-    outline: none;
-    font-size: var(--normal-font-size);
-    cursor: pointer;
-    margin-left: auto;
-    padding: 10px 20px;
-    background-color: var(--first-color); /* Same as Contact button */
+    display: inline-block;
+    padding: 8px 16px;  /* Reduce padding to match other navbar items */
+    background-color: var(--first-color);  /* Same as Contact button */
     color: white;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 8px;  /* Rounded corners */
+    border-radius: 6px;  /* Slightly rounded */
     transition: background 0.3s ease-in-out;
+    margin-left: 20px; /* Adds spacing from Contact */
+    font-size: var(--normal-font-size);
+}
+
+/* Ensure it aligns with other navbar items */
+.nav__list {
+    display: flex;
+    align-items: center; /* This will align all navbar items in one line */
 }
 
 .resume__button:hover {
     background-color: var(--first-color-alt); /* Slightly darker on hover */
 }
+
 
 /* ===== FOOTER =====*/
 .footer {
