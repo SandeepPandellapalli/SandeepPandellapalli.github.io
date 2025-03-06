@@ -372,7 +372,7 @@ img {
 /* New hover effects */
 .work__img:hover img {
   transform: scale(1.1); /* Scales the image up to create a zoom effect */
-  opacity: 0.2; /* Reduces the opacity to 50% */
+  opacity: 0.8; /* Reduces the opacity to 50% */
 }
 
 
