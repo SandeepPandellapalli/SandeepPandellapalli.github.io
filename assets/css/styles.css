@@ -252,7 +252,6 @@ img {
 
 /* ===== SKILLS =====*/
 /* ===== SKILLS SECTION ===== */
-/* ===== SKILLS SECTION ===== */
 .skills__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -297,8 +296,10 @@ img {
 }
 
 .skill__button:hover {
-    background-color: var(--first-color-alt); /* Slightly darker on hover */
+    background-color: #3A4DC9; /* A slightly darker blue instead of white */
+    transition: background 0.3s ease-in-out;
 }
+
 
 
 /* ===== CONTACT =====*/
