@@ -51,7 +51,23 @@ const sr = ScrollReveal({
 //     reset: true
 });
 
-sr.reveal('.home__data, .about__img, .skills__category, .skills__heading',{}); 
-sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img, .skill__button',{delay: 400}); 
+sr.reveal('.home__data, .about__img',{}); 
+sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon, .work__title' ,{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
+// Revealing the skills section categories
+sr.reveal('.skills__category', {
+    interval: 100 // Small interval for sequential reveal of each category
+});
+
+// Revealing the headings within each category with no additional delay
+sr.reveal('.skills__heading', {
+    delay: 500 // Slightly later than the category itself
+});
+
+// Revealing each skill within the categories with a stagger to follow the headings closely
+sr.reveal('.skill__button', {
+    interval: 50, // Stagger each button to follow quickly after the heading
+    delay: 600 // Starts revealing skills shortly after the heading is shown
+});
