@@ -363,14 +363,25 @@ img {
   width: 100%; /* Makes image fill the container */
   height: auto; /* Maintains aspect ratio */
 }
-
 .work__title {
-  font-size: var(--normal-font-size); /* Sets the font size from your root variables */
-  color: var(--second-color); /* Text color for readability */
-  text-align: center; /* Centers the title text */
-  padding: 0.5rem; /* Padding around the text for spacing */
-  width: 100%; /* Ensures the title width matches the image */
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--first-color); /* Use the same blue background */
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px; /* Rounded edges */
+    transition: background 0.3s ease-in-out;
+    text-align: center;
+    margin-top: 10px; /* Space between image and title */
+    font-size: var(--normal-font-size);
 }
+.work__title:hover {
+    background-color: #2F3EB1; /* Slightly darker blue on hover */
+    color: white;
+    transition: background 0.3s ease-in-out;
+}
+
 
 
 /* Ensure it aligns with other navbar items */
