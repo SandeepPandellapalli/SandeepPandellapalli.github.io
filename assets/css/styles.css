@@ -270,11 +270,15 @@ img {
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Left Column */
 .experience__left {
-  text-align: center;
-  flex: 0 0 200px; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* Center items horizontally */
+  justify-content: center;  /* (Optional) centers items vertically if there's extra space */
+  /* Keep any existing styling like width, text color, etc. */
 }
+
+
 
 .experience__company-name {
   font-size: 1rem;
