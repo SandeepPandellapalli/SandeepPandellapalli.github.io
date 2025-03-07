@@ -251,99 +251,94 @@ img {
 }
 
 /*===== EXPERIENCE SECTION STYLES =====*/
+/*===== EXPERIENCE SECTION (NEW) =====*/
+
 .experience {
-    padding: 2rem 0;
+  padding: 2rem 0;
 }
 
-.timeline {
-    position: relative;
-    padding-left: 100px; /* Space for the timeline */
-    list-style: none;
+.experience__container {
+  /* The bd-grid class is already set up, so we just ensure spacing here */
+  row-gap: 2rem; /* Space between each experience item */
 }
 
-.timeline__item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    position: relative;
-    width: 100%
+/* Each experience item displayed as a horizontal row */
+.experience__item {
+  display: flex;
+  align-items: flex-start; /* Align items at the top */
+  column-gap: 2rem;       /* Space between left and right columns */
+  background-color: #fff; 
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
 }
 
-.timeline__date {
-    position: absolute;
-    left: -95px; /* Adjust based on your layout */
-    white-space: nowrap;
+/* Left side: Company name & logo */
+.experience__left {
+  text-align: center; /* Center company name & logo */
+  flex: 0 0 200px;    /* Fixed width or adjust to your preference */
 }
 
-.timeline__dot {
-    width: 15px;
-    height: 15px;
-    background-color: var(--first-color);
-    border-radius: 50%;
-    position: absolute;
-    left: -5.55px; /* Aligns with the vertical line */
+.experience__company-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--first-color); /* Use your primary color variable */
+  margin-bottom: 0.5rem;
 }
-
-.timeline__content {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-    margin-left: 20px;
-    flex-grow: 1; /* Ensures content takes available space */
-}
-
-.timeline::before {
-    display: none;
-}
-
 
 .experience__logo {
-    width: 250px;
-    margin-left: -50px; 
-    margin-right: 500px;
+  width: 120px;       /* Adjust as needed */
+  height: auto;       /* Maintain aspect ratio */
+  border-radius: 6px; /* Optional rounding */
+}
+
+/* Right side: Position, dates, bullet points */
+.experience__right {
+  flex: 1;            /* Take the remaining width */
 }
 
 .experience__position {
-    font-size: var(--normal-font-size);
-    color: var(--second-color);
-    font-weight: bold;
-    margin-right: 20px;
-}
-.timeline__details {
-    background-color: #FFFFFF; /* White background for the box */
-    border-radius: 8px; /* Rounded corners */
-    padding: 10px 20px; /* Padding inside the box */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-    margin-left: -450px; /* Space from the logo to the details box */
-    flex-grow: 1; /* Adjusted width; can use percentage or fixed px value */
-    max-width: 1000px; /* Maximum width */
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--second-color);
+  margin-bottom: 0.5rem;
 }
 
-.timeline__details ul {
-    list-style-type: none; /* No default bullets */
-    padding: 0; /* Removes padding */
-    margin: 0; /* Removes default margin */
-}
-.timeline__details li {
-    background-color: var(--first-color); /* Blue background for list items */
-    color: white; /* White text color */
-    padding: 5px 10px; /* Padding inside each list item */
-    margin-bottom: 5px; /* Space between list items */
-    border-radius: 5px; /* Rounded corners for list items */
-    font-size: 16px; /* Adjust font size as needed */
-}
-.company-name {
-    font-size: 16px; /* Adjust font size */
-    color: var(--first-color); /* Use your primary color */
-    text-align: center; /* Center-align the text */
-    margin-top: 10px; /* Space between the logo and the text */
-    font-weight: bold; /* Make it stand out */
+.experience__dates {
+  font-weight: normal;
+  font-size: 0.875rem;
+  color: #666;
+  margin-left: 6px;
 }
 
+.experience__right ul {
+  list-style-type: disc;  /* Standard bullet points */
+  margin-left: 1.5rem;    /* Indent bullets */
+  padding: 0;
+}
 
+.experience__right li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* RESPONSIVE ADJUSTMENTS (Optional) */
+@media screen and (max-width: 768px) {
+  .experience__item {
+    flex-direction: column; /* Stack columns on smaller screens */
+    align-items: flex-start;
+  }
+
+  .experience__left {
+    margin-bottom: 1rem;
+    flex: auto; /* Let it resize naturally on mobile */
+    text-align: left;
+  }
+
+  .experience__right {
+    width: 100%; 
+  }
+}
 
 
 
