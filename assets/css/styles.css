@@ -321,8 +321,8 @@ img {
     border-radius: 8px; /* Rounded corners */
     padding: 10px 20px; /* Padding inside the box */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-    margin-left: 20px; /* Space from the logo to the details box */
-    width: 50%; /* Adjusted width; can use percentage or fixed px value */
+    margin-left: 0px; /* Space from the logo to the details box */
+    width: 100%; /* Adjusted width; can use percentage or fixed px value */
     max-width: 600px; /* Maximum width */
 }
 
