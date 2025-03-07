@@ -542,30 +542,3 @@ img {
     width: 450px;
   }
 }
-
-.skill__button:hover, .experience__link:hover {
-    background-color: var(--first-color-alt); /* Darker shade for hover */
-    color: white;
-}
-
-/* Active or selected state for skills and experiences */
-.skill__button.active, .experience__link.active {
-    border: 2px solid var(--first-color); /* Highlight border when active */
-}
-
-/* Styling connections (using pseudo-elements for lines) */
-.skills__category[data-skill="python"] .skills__heading::after {
-    content: '';
-    position: absolute;
-    width: 2px; /* Line thickness */
-    height: 100px; /* Adjust based on layout */
-    background-color: var(--first-color);
-    opacity: 0; /* Hidden by default */
-    transition: opacity 0.3s ease;
-}
-
-/* Show line when active */
-.skills__category[data-skill="python"].active .skills__heading::after {
-    opacity: 1; /* Show line */
-}
-
