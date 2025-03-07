@@ -251,7 +251,6 @@ img {
 }
 
 /*===== EXPERIENCE SECTION STYLES =====*/
-/* General Structure and Alignment */
 .experience {
     display: flex;
     flex-direction: column;
@@ -261,30 +260,35 @@ img {
 
 .experience__container {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start; /* Align items to the top */
     position: relative; /* Needed for absolute positioning of the date */
 }
 
+/* Timeline Styling */
 .timeline {
     position: relative;
     border-left: 2px solid #0077CC; /* Example color */
     height: auto;
-    padding-right: 20px;
+    padding-left: 20px; /* Add padding to separate content from the line */
 }
 
+/* Date Styling */
 .timeline__date {
     position: absolute;
-    left: 0; /* Aligns with the start of the line */
-    transform: translateX(-100%); /* Adjust as needed */
+    left: -70px; /* Move the date further left */
+    transform: translateX(0); /* Remove extra horizontal adjustment */
+    font-size: 0.9rem; /* Adjust font size for better readability */
+    color: #333; /* Ensure good contrast for visibility */
 }
 
+/* Logo Styling */
 .experience__logo {
     width: 50px;
     height: auto;
     margin-right: 20px;
 }
 
+/* Details Styling */
 .experience__details {
     flex-grow: 1;
     padding-left: 20px; /* Adjust space between logo and text */
@@ -295,7 +299,7 @@ img {
     margin-left: calc(-50px + 10%); /* Adjusts the starting position */
 }
 
-/* Ensure the 'I am Sandeep' and 'Experience' headers align */
+/* Ensure 'I am Sandeep' and 'Experience' headers align properly */
 .experience__header, .about__header {
     margin-left: calc(50px + 10%); /* Match the left alignment */
 }
@@ -306,6 +310,7 @@ img {
         padding-right: 15%; /* Avoid overlap with skills section */
     }
 }
+
 
 
 /* ===== SKILLS SECTION ===== */
