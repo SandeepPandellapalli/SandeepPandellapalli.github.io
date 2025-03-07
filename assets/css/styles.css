@@ -306,6 +306,7 @@ img {
 
 .experience__logo {
     width: 300px;
+    margin-left: 30px; 
     margin-right: 500px;
 }
 
