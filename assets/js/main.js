@@ -71,3 +71,12 @@ sr.reveal('.skill__button', {
     interval: 50, // Stagger each button to follow quickly after the heading
     delay: 600 // Starts revealing skills shortly after the heading is shown
 });
+
+ScrollReveal().reveal('.experience__item', {
+  distance: '50px',
+  duration: 800,
+  easing: 'ease-in-out',
+  origin: 'bottom',
+  interval: 200
+});
+
