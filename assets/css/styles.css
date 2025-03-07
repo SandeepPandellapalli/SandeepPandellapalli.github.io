@@ -280,7 +280,7 @@ img {
     background-color: var(--first-color);
     border-radius: 50%;
     position: absolute;
-    left: -5px; /* Aligns with the vertical line */
+    left: -5.5px; /* Aligns with the vertical line */
 }
 
 .timeline__content {
