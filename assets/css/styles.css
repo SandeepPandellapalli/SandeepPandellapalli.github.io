@@ -257,7 +257,7 @@ img {
 
 .timeline {
     position: relative;
-    padding-left: 500px; /* Space for the timeline */
+    padding-left: 100px; /* Space for the timeline */
     list-style: none;
 }
 
@@ -296,7 +296,7 @@ img {
 .timeline::before {
     content: '';
     position: absolute;
-    left: 30;
+    left: 10;
     top: 0;
     bottom: 0;
     width: 2px;
