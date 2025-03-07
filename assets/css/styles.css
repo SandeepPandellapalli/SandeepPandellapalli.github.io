@@ -337,7 +337,7 @@ img {
 }
 .company-name {
     font-size: 16px; /* Adjust the font size as needed */
-    color: #333; /* Dark grey for readability, adjust as per your design */
+    color: var(--first-color);; /* Dark grey for readability, adjust as per your design */
     text-align: center; /* Center the text below the logo */
     margin-top: 5px; /* Space between the logo and the text */
 }
