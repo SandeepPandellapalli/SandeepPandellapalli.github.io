@@ -250,6 +250,57 @@ img {
   border-radius: 0.5rem;
 }
 
+/*===== EXPERIENCE SECTION =====*/
+.experience {
+    padding: 2rem 0;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 40px;
+    list-style: none;
+}
+
+.timeline__item {
+    margin-bottom: 20px;
+}
+
+.timeline__content {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    width: 80%;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    height: 100%;
+    width: 2px;
+    background-color: var(--first-color);
+}
+
+.experience__logo {
+    width: 50px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.experience__year {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.experience__position {
+    font-size: var(--normal-font-size);
+    color: var(--second-color);
+    margin-bottom: 5px;
+}
+
+
 /* ===== SKILLS =====*/
 /* ===== SKILLS SECTION ===== */
 .skills__container {
