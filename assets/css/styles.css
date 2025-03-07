@@ -261,36 +261,36 @@ img {
 }
 
 .experience__item {
+  display: flex;             /* Ensure a side-by-side layout */
+  align-items: flex-start;   /* Align items at the top */
   position: relative;
-  /* A soft gradient background */
+  
+  /* New “card” styles */
   background: linear-gradient(135deg, #f9f9f9, #ffffff);
+  border-left: 4px solid var(--first-color);
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 2rem;
-
-  /* Accent border on the left */
-  border-left: 4px solid var(--first-color);
-
-  /* Subtle shadow */
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .experience__item:hover {
-  /* Lift the card on hover */
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
+/* Left column (company info) */
 .experience__left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;      /* Center items horizontally */
-  justify-content: center;  /* (Optional) centers items vertically if there's extra space */
-  /* Keep any existing styling like width, text color, etc. */
+  flex: 0 0 220px; /* Fixed width or adjust as needed */
+  text-align: center;
 }
 
-
+/* Right column (position & bullet points) */
+.experience__right {
+  flex: 1;         /* Takes the remaining space */
+  margin-left: 1.5rem; /* Space between left & right columns */
+}
 
 .experience__company-name {
   font-size: 1rem;
@@ -304,11 +304,6 @@ img {
   width: 220px;  /* Increased from 120px to 150px */
   height: auto;
   border-radius: 6px;
-}
-
-/* Right Column */
-.experience__right {
-  flex: 1; /* Takes remaining space */
 }
 
 /* Container to position the job title and dates on one line */
