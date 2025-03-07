@@ -302,7 +302,7 @@ img {
 
 .experience__logo {
     width: 250px;
-    margin-left: 0px; 
+    margin-left: -100px; 
     margin-right: 500px;
 }
 
