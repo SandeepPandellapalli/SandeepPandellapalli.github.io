@@ -305,8 +305,8 @@ img {
 }
 
 .experience__logo {
-    width: 150px;
-    margin-right: 100px;
+    width: 500px;
+    margin-right: 500px;
 }
 
 .experience__position {
@@ -315,12 +315,6 @@ img {
     font-weight: bold;
     margin-right: 20px;
 }
-
-.timeline__logo {
-    margin-right: 100px; /* Space between logo and details */
-    flex-shrink: 0; /* Prevents logo from resizing */
-}
-
 .timeline__details {
     flex: 1; /* Takes the remaining space */
     display: flex;
