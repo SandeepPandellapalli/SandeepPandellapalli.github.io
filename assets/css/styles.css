@@ -251,74 +251,44 @@ img {
 }
 
 /*===== EXPERIENCE SECTION STYLES =====*/
-.experience {
-    padding: 2rem 0;
+
+/* Base alignment for the header and sections */
+.section {
+    padding-left: 30px; /* Adjust this value as needed to align with 'I am Sandeep' */
+}
+
+/* Specific adjustments for the Experience section */
+.experience__container {
+    position: relative; /* Make sure positioning is relative for absolute positioning inside */
 }
 
 .timeline {
-    position: relative;
-    padding-left: 40px; /* Space for the timeline */
-    list-style: none;
-}
-
-.timeline__item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    position: relative;
+    position: absolute;
+    left: 0; /* Align this as needed, initially setting to 0 */
+    padding-left: 30px; /* This should align with the start of 'I am Sandeep' */
 }
 
 .timeline__date {
     position: absolute;
-    left: -145px; /* Adjust based on your layout */
-    white-space: nowrap;
+    left: 0; /* This can remain at 0 or adjusted if the date needs to move independently of the line */
 }
 
 .timeline__dot {
-    width: 15px;
-    height: 15px;
-    background-color: var(--first-color);
-    border-radius: 50%;
     position: absolute;
-    left: -48px; /* Aligns with the vertical line */
+    left: 20px; /* Adjust to place the dot correctly on the timeline */
 }
 
 .timeline__content {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-    margin-left: 20px;
+    margin-left: 50px; /* Adjust this so the content aligns properly to the right of the dot */
 }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: var(--first-color);
+/* Additional alignments for responsive or specific tweaks */
+@media screen and (min-width: 768px) {
+    .section {
+        padding-left: 40px; /* Larger screens may need different alignment */
+    }
 }
 
-.experience__logo {
-    width: 50px;
-    margin-right: 20px;
-}
-
-.experience__position {
-    font-size: var(--normal-font-size);
-    color: var(--second-color);
-    font-weight: bold;
-    margin-right: 20px;
-}
-
-
-
-
-/* ===== SKILLS =====*/
 /* ===== SKILLS SECTION ===== */
 .skills__container {
     display: grid;
