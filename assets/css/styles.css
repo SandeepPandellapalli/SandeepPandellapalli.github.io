@@ -270,7 +270,7 @@ img {
 
 .timeline__date {
     position: absolute;
-    left: -150px; /* Adjust based on your layout */
+    left: -145px; /* Adjust based on your layout */
     white-space: nowrap;
 }
 
@@ -280,7 +280,7 @@ img {
     background-color: var(--first-color);
     border-radius: 50%;
     position: absolute;
-    left: -50px; /* Aligns with the vertical line */
+    left: -48px; /* Aligns with the vertical line */
 }
 
 .timeline__content {
