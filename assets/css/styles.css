@@ -18,7 +18,7 @@
   --smaller-font-size: .75rem;
   /*===== Margenes =====*/
   --mb-2: 1rem;
-  --mb-4: 2rem;
+  --mb-4: 2rem;exp
   --mb-5: 2.5rem;
   --mb-6: 3rem;
   /*===== z index =====*/
@@ -280,10 +280,12 @@ img {
 
 /* Left column: fixed width */
 .experience__left {
-  flex: 0 0 220px; /* 220px is just an example; pick a width that fits your content */
-  text-align: center; 
-  margin-right: 1rem; /* Gap between columns */
+  display: flex; 
+  flex-direction: column;
+  align-items: center;     /* Centers horizontally */
+  justify-content: center; /* Centers vertically */
 }
+
 
 
 /* Right column: fills remaining space */
