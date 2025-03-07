@@ -251,69 +251,74 @@ img {
 }
 
 /*===== EXPERIENCE SECTION STYLES =====*/
-/*===== EXPERIENCE SECTION (NEW) =====*/
-
+/*===== EXPERIENCE SECTION =====*/
 .experience {
   padding: 2rem 0;
 }
 
 .experience__container {
-  /* The bd-grid class is already set up, so we just ensure spacing here */
   row-gap: 2rem; /* Space between each experience item */
 }
 
-/* Each experience item displayed as a horizontal row */
 .experience__item {
   display: flex;
-  align-items: flex-start; /* Align items at the top */
-  column-gap: 2rem;       /* Space between left and right columns */
+  align-items: flex-start; 
+  column-gap: 2rem;
   background-color: #fff; 
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Left side: Company name & logo */
+/* Left Column */
 .experience__left {
-  text-align: center; /* Center company name & logo */
-  flex: 0 0 200px;    /* Fixed width or adjust to your preference */
+  text-align: center;
+  flex: 0 0 200px; /* Adjust as needed */
 }
 
 .experience__company-name {
   font-size: 1rem;
   font-weight: bold;
-  color: var(--first-color); /* Use your primary color variable */
+  color: var(--first-color); /* Or your preferred color */
   margin-bottom: 0.5rem;
 }
 
+/* Increase the logo size here */
 .experience__logo {
-  width: 120px;       /* Adjust as needed */
-  height: auto;       /* Maintain aspect ratio */
-  border-radius: 6px; /* Optional rounding */
+  width: 150px;  /* Increased from 120px to 150px */
+  height: auto;
+  border-radius: 6px;
 }
 
-/* Right side: Position, dates, bullet points */
+/* Right Column */
 .experience__right {
-  flex: 1;            /* Take the remaining width */
+  flex: 1; /* Takes remaining space */
+}
+
+/* Container to position the job title and dates on one line */
+.experience__position-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Pushes dates to the right */
+  margin-bottom: 0.5rem;
 }
 
 .experience__position {
   font-size: 1rem;
   font-weight: bold;
   color: var(--second-color);
-  margin-bottom: 0.5rem;
 }
 
+/* Dates on the far right */
 .experience__dates {
-  font-weight: normal;
   font-size: 0.875rem;
   color: #666;
-  margin-left: 6px;
+  font-weight: normal;
 }
 
 .experience__right ul {
-  list-style-type: disc;  /* Standard bullet points */
-  margin-left: 1.5rem;    /* Indent bullets */
+  list-style-type: disc;
+  margin-left: 1.5rem; 
   padding: 0;
 }
 
@@ -322,21 +327,19 @@ img {
   line-height: 1.4;
 }
 
-/* RESPONSIVE ADJUSTMENTS (Optional) */
+/* Responsive for smaller screens */
 @media screen and (max-width: 768px) {
   .experience__item {
-    flex-direction: column; /* Stack columns on smaller screens */
+    flex-direction: column;
     align-items: flex-start;
   }
-
   .experience__left {
     margin-bottom: 1rem;
-    flex: auto; /* Let it resize naturally on mobile */
+    flex: auto; 
     text-align: left;
   }
-
   .experience__right {
-    width: 100%; 
+    width: 100%;
   }
 }
 
