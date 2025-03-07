@@ -296,7 +296,7 @@ img {
 .experience__company-name {
   /* Plain text styling */
   font-size: 1.2rem;
-  font-weight: bold;
+  /*font-weight: bold;*/
   color: var(--second-color); /* or simply #000 if you prefer */
   background: none;          /* Remove blue background */
   border-radius: 0;          /* Remove badge shape */
@@ -336,6 +336,7 @@ img {
   border-radius: 4px;
   margin-bottom: 1rem;
   font-size: 1rem;
+  font-weight: bold;
 }
 
 .experience__dates {
