@@ -300,11 +300,11 @@ img {
 }
 
 
-.experience__logo {
+/*.experience__logo {
     width: 250px;
     margin-left: -50px; 
     margin-right: 500px;
-}
+}*/
 
 .experience__position {
     font-size: var(--normal-font-size);
@@ -342,6 +342,22 @@ img {
     margin-top: 10px; /* Space between the logo and the text */
     font-weight: bold; /* Make it stand out */
 }
+
+/* Logo container styling */
+.logo-container {
+    display: flex;
+    flex-direction: column; /* Stack logo and company name vertically */
+    align-items: center; /* Center-align both logo and text */
+    margin-bottom: 20px; /* Add space below logo-container */
+}
+
+
+/* Experience logo adjustments */
+.experience__logo {
+    width: 100px; /* Adjust width as needed */
+    height: auto;
+}
+
 
 
 /* ===== SKILLS SECTION ===== */
