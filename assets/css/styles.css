@@ -251,14 +251,13 @@ img {
 }
 
 /*===== EXPERIENCE SECTION STYLES =====*/
-/*===== EXPERIENCE SECTION STYLES =====*/
 .experience {
     padding: 2rem 0;
 }
 
 .timeline {
     position: relative;
-    padding-left: 40px; /* Space for the timeline */
+    padding-left: 80px; /* Space for the timeline */
     list-style: none;
 }
 
@@ -271,7 +270,7 @@ img {
 
 .timeline__date {
     position: absolute;
-    left: -120px; /* Adjust based on your layout */
+    left: -20px; /* Adjust based on your layout */
     white-space: nowrap;
 }
 
@@ -281,7 +280,7 @@ img {
     background-color: var(--first-color);
     border-radius: 50%;
     position: absolute;
-    left: -20px; /* Aligns with the vertical line */
+    left: -60px; /* Aligns with the vertical line */
 }
 
 .timeline__content {
