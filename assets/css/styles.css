@@ -257,7 +257,7 @@ img {
 
 .timeline {
     position: relative;
-    padding-left: 200px; /* Space for the timeline */
+    padding-left: 500px; /* Space for the timeline */
     list-style: none;
 }
 
