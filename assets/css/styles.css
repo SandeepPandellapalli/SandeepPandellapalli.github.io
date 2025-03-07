@@ -294,15 +294,16 @@ img {
 }
 
 .experience__company-name {
-  display: inline-block;
-  background-color: var(--first-color); 
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 4px;
+  /* Plain text styling */
+  font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 1rem;
-  font-size: 1rem;
+  color: var(--second-color); /* or simply #000 if you prefer */
+  background: none;          /* Remove blue background */
+  border-radius: 0;          /* Remove badge shape */
+  padding: 0;                /* Remove badge padding */
+  margin-bottom: 1rem;       /* Spacing if desired */
 }
+
 
 
 /* Increase the logo size here */
@@ -327,9 +328,14 @@ img {
 }
 
 .experience__position {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: var(--second-color);
+  /* Badge styling */
+  display: inline-block;
+  background-color: var(--first-color); /* Blue background (your primary color) */
+  color: #fff;                          /* White text */
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
 .experience__dates {
