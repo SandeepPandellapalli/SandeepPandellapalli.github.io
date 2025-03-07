@@ -250,14 +250,14 @@ img {
   border-radius: 0.5rem;
 }
 
-/*===== EXPERIENCE SECTION =====*/
+/*===== EXPERIENCE SECTION STYLES =====*/
 .experience {
     padding: 2rem 0;
 }
 
 .timeline {
     position: relative;
-    padding-left: 40px;
+    padding-left: 40px; /* Space for the timeline */
     list-style: none;
 }
 
@@ -265,11 +265,13 @@ img {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .timeline__date {
-    font-weight: bold;
-    margin-right: 20px;
+    position: absolute;
+    left: -120px; /* Adjust based on your layout */
+    white-space: nowrap;
 }
 
 .timeline__dot {
@@ -277,23 +279,24 @@ img {
     height: 15px;
     background-color: var(--first-color);
     border-radius: 50%;
-    position: relative;
+    position: absolute;
+    left: -20px; /* Aligns with the vertical line */
 }
 
 .timeline__content {
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
     margin-left: 20px;
 }
 
 .timeline::before {
     content: '';
     position: absolute;
-    left: 68px; /* Adjust depending on exact alignment needs */
+    left: 0;
     top: 0;
     bottom: 0;
     width: 2px;
@@ -302,7 +305,6 @@ img {
 
 .experience__logo {
     width: 50px;
-    display: block;
     margin-right: 20px;
 }
 
@@ -310,7 +312,9 @@ img {
     font-size: var(--normal-font-size);
     color: var(--second-color);
     font-weight: bold;
+    margin-right: 20px;
 }
+
 
 
 
