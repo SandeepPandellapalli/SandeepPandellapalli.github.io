@@ -252,40 +252,47 @@ img {
 
 /*===== EXPERIENCE SECTION STYLES =====*/
 
-/* Base alignment for the header and sections */
-.section {
-    padding-left: 30px; /* Adjust this value as needed to align with 'I am Sandeep' */
+.experience {
+    width: 100%; /* Ensure the section uses only the necessary width */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    margin-bottom: 2rem; /* Add space below the section */
 }
 
-/* Specific adjustments for the Experience section */
 .experience__container {
-    position: relative; /* Make sure positioning is relative for absolute positioning inside */
+    display: flex;
+    align-items: center; /* Align items on the cross axis */
+    justify-content: flex-start; /* Align items along the main axis */
+    padding: 1rem 0; /* Padding inside the container for spacing */
 }
 
 .timeline {
-    position: absolute;
-    left: 0; /* Align this as needed, initially setting to 0 */
-    padding-left: 30px; /* This should align with the start of 'I am Sandeep' */
+    position: relative;
+    border-left: 2px solid #0077CC; /* Example color */
+    height: auto; /* Adjust based on content */
+    padding-right: 20px; /* Space after the line */
 }
 
 .timeline__date {
     position: absolute;
-    left: 0; /* This can remain at 0 or adjusted if the date needs to move independently of the line */
+    left: -20px; /* Adjust based on actual layout */
+    top: 0; /* Align with the top of the container */
 }
 
-.timeline__dot {
-    position: absolute;
-    left: 20px; /* Adjust to place the dot correctly on the timeline */
+.experience__logo {
+    width: 50px; /* Reduce the size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between logo and text */
 }
 
-.timeline__content {
-    margin-left: 50px; /* Adjust this so the content aligns properly to the right of the dot */
+.experience__details {
+    flex: 1; /* Take up remaining space */
 }
 
-/* Additional alignments for responsive or specific tweaks */
-@media screen and (min-width: 768px) {
-    .section {
-        padding-left: 40px; /* Larger screens may need different alignment */
+/* Adjust spacing to prevent overlap */
+@media (min-width: 768px) {
+    .experience {
+        padding-right: 15%; /* Add padding to ensure it does not overlap with the skills section */
     }
 }
 
