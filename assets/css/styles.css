@@ -251,50 +251,62 @@ img {
 }
 
 /*===== EXPERIENCE SECTION STYLES =====*/
-
+/* General Structure and Alignment */
 .experience {
-    width: 100%; /* Ensure the section uses only the necessary width */
     display: flex;
-    flex-direction: column; /* Stack content vertically */
-    margin-bottom: 2rem; /* Add space below the section */
+    flex-direction: column;
+    margin-bottom: 2rem; /* Adjust space below the section */
+    width: 100%;
 }
 
 .experience__container {
     display: flex;
-    align-items: center; /* Align items on the cross axis */
-    justify-content: flex-start; /* Align items along the main axis */
-    padding: 1rem 0; /* Padding inside the container for spacing */
+    align-items: center;
+    justify-content: flex-start;
+    position: relative; /* Needed for absolute positioning of the date */
 }
 
 .timeline {
     position: relative;
     border-left: 2px solid #0077CC; /* Example color */
-    height: auto; /* Adjust based on content */
-    padding-right: 20px; /* Space after the line */
+    height: auto;
+    padding-right: 20px;
 }
 
 .timeline__date {
     position: absolute;
-    left: -20px; /* Adjust based on actual layout */
-    top: 0; /* Align with the top of the container */
+    left: 0; /* Aligns with the start of the line */
+    transform: translateX(-100%); /* Adjust as needed */
 }
 
 .experience__logo {
-    width: 50px; /* Reduce the size of the logo */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 20px; /* Space between logo and text */
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
 }
 
 .experience__details {
-    flex: 1; /* Take up remaining space */
+    flex-grow: 1;
+    padding-left: 20px; /* Adjust space between logo and text */
 }
 
-/* Adjust spacing to prevent overlap */
+/* Specific Alignment Adjustments */
+.experience__container {
+    margin-left: calc(50px + 10%); /* Adjusts the starting position */
+}
+
+/* Ensure the 'I am Sandeep' and 'Experience' headers align */
+.experience__header, .about__header {
+    margin-left: calc(50px + 10%); /* Match the left alignment */
+}
+
+/* Responsive Adjustments */
 @media (min-width: 768px) {
     .experience {
-        padding-right: 15%; /* Add padding to ensure it does not overlap with the skills section */
+        padding-right: 15%; /* Avoid overlap with skills section */
     }
 }
+
 
 /* ===== SKILLS SECTION ===== */
 .skills__container {
