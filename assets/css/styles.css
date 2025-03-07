@@ -257,7 +257,7 @@ img {
 
 .timeline {
     position: relative;
-    padding-left: 130px; /* Space for the timeline */
+    padding-left: 200px; /* Space for the timeline */
     list-style: none;
 }
 
@@ -270,7 +270,7 @@ img {
 
 .timeline__date {
     position: absolute;
-    left: -60px; /* Adjust based on your layout */
+    left: -150px; /* Adjust based on your layout */
     white-space: nowrap;
 }
 
@@ -319,6 +319,7 @@ img {
 
 
 /* ===== SKILLS SECTION ===== */
+
 .skills__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
