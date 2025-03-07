@@ -292,7 +292,7 @@ img {
 
 /* Specific Alignment Adjustments */
 .experience__container {
-    margin-left: calc(50px + 10%); /* Adjusts the starting position */
+    margin-left: calc(-50px + 10%); /* Adjusts the starting position */
 }
 
 /* Ensure the 'I am Sandeep' and 'Experience' headers align */
