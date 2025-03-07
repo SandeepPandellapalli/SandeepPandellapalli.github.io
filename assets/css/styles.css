@@ -280,7 +280,7 @@ img {
     background-color: var(--first-color);
     border-radius: 50%;
     position: absolute;
-    left: -5.5px; /* Aligns with the vertical line */
+    left: -5.55px; /* Aligns with the vertical line */
 }
 
 .timeline__content {
@@ -291,6 +291,7 @@ img {
     border-radius: 8px;
     box-shadow: 0 3px 15px rgba(0,0,0,0.1);
     margin-left: 20px;
+    flex-grow: 1; /* Ensures content takes available space */
 }
 
 .timeline::before {
@@ -317,6 +318,7 @@ img {
 
 .timeline__logo {
     margin-right: 20px; /* Space between logo and details */
+    flex-shrink: 0; /* Prevents logo from resizing */
 }
 
 .timeline__details {
