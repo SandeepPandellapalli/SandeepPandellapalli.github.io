@@ -296,14 +296,9 @@ img {
 }
 
 .timeline::before {
-    content: '';
-    position: absolute;
-    left: 10;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background-color: var(--first-color);
+    display: none;
 }
+
 
 .experience__logo {
     width: 150px;
