@@ -278,14 +278,17 @@ img {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* Left column: fixed width */
 .experience__left {
-  display: flex; 
-  flex-direction: column;
-  align-items: center;     /* Centers horizontally */
-  justify-content: center; /* Centers vertically */
+  display: grid;
+  /* Make two rows: 
+     1) auto row for the company name 
+     2) a flexible row that fills remaining space */
+  grid-template-rows: auto 1fr;
+  align-items: center; 
+  text-align: center; /* If you also want to center horizontally */
+  /* set a fixed width if you're using a two-column layout:
+     flex: 0 0 220px; or similar. */
 }
-
 
 
 /* Right column: fills remaining space */
@@ -294,26 +297,18 @@ img {
 }
 
 .experience__company-name {
-  /* Plain text styling */
-  font-size: 1.2rem;
-  /*font-weight: bold;*/
-  color: var(--second-color); /* or simply #000 if you prefer */
-  background: none;          /* Remove blue background */
-  border-radius: 0;          /* Remove badge shape */
-  padding: 0;                /* Remove badge padding */
-  margin-bottom: 1rem;       /* Spacing if desired */
+  /* By default, it will be in the first row at the top */
+  margin-bottom: 1rem; 
 }
 
 
 
-/* Increase the logo size here */
+
 .experience__logo {
-  width: 220px;   /* Increase size if you like */
+  /* By default, it will be in the second row, centered vertically 
+     because we used align-items: center. */
+  width: 200px;  /* Example size */
   height: auto;
-  border-radius: 8px;
-  background-color: #fff;  
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
 }
 
 .experience__logo:hover {
