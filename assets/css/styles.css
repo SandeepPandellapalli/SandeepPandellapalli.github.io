@@ -261,11 +261,9 @@ img {
 }
 
 .experience__item {
-  display: flex;             /* Ensure a side-by-side layout */
-  align-items: flex-start;   /* Align items at the top */
-  position: relative;
-  
-  /* New “card” styles */
+  display: flex; 
+  align-items: flex-start;
+  /* Card styling from before (gradient, border, etc.) */
   background: linear-gradient(135deg, #f9f9f9, #ffffff);
   border-left: 4px solid var(--first-color);
   border-radius: 12px;
@@ -280,17 +278,17 @@ img {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* Left column (company info) */
+/* Left column: fixed width */
 .experience__left {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center the text & logo */
+  flex: 0 0 220px; /* 220px is just an example; pick a width that fits your content */
+  text-align: center; 
+  margin-right: 1rem; /* Gap between columns */
 }
 
-/* Right column (position & bullet points) */
+
+/* Right column: fills remaining space */
 .experience__right {
-  flex: 1;         /* Takes the remaining space */
-  margin-left: 1.5rem; /* Space between left & right columns */
+  flex: 1;
 }
 
 .experience__company-name {
@@ -320,9 +318,10 @@ img {
   transform: scale(1.02);
 }
 
+/* Position/dates container, bullet list, etc. */
 .experience__position-container {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
 }
