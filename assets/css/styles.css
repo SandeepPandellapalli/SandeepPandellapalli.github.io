@@ -317,7 +317,7 @@ img {
 }
 
 .timeline__logo {
-    margin-right: 20px; /* Space between logo and details */
+    margin-right: 100px; /* Space between logo and details */
     flex-shrink: 0; /* Prevents logo from resizing */
 }
 
