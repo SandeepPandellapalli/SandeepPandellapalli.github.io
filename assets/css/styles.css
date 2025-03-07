@@ -257,7 +257,7 @@ img {
 
 .timeline {
     position: relative;
-    padding-left: 80px; /* Space for the timeline */
+    padding-left: 130px; /* Space for the timeline */
     list-style: none;
 }
 
@@ -270,7 +270,7 @@ img {
 
 .timeline__date {
     position: absolute;
-    left: -20px; /* Adjust based on your layout */
+    left: -60px; /* Adjust based on your layout */
     white-space: nowrap;
 }
 
