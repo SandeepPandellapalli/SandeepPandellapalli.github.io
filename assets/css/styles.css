@@ -315,8 +315,15 @@ img {
     margin-right: 20px;
 }
 
+.timeline__logo {
+    margin-right: 20px; /* Space between logo and details */
+}
 
-
+.timeline__details {
+    flex: 1; /* Takes the remaining space */
+    display: flex;
+    flex-direction: column; /* Organizes the position and points vertically */
+}
 
 /* ===== SKILLS SECTION ===== */
 
