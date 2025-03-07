@@ -336,11 +336,13 @@ img {
     font-size: 16px; /* Adjust font size as needed */
 }
 .company-name {
-    font-size: 16px; /* Adjust the font size as needed */
-    color: var(--first-color);; /* Dark grey for readability, adjust as per your design */
-    text-align: center; /* Center the text below the logo */
-    margin-top: 5px; /* Space between the logo and the text */
+    font-size: 16px; /* Adjust font size */
+    color: var(--first-color); /* Use your primary color */
+    text-align: center; /* Center-align the text */
+    margin-top: 10px; /* Space between the logo and the text */
+    font-weight: bold; /* Make it stand out */
 }
+
 
 /* ===== SKILLS SECTION ===== */
 
