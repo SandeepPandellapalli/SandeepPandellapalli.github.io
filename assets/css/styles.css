@@ -596,62 +596,72 @@ img {
 }
 
 /*===== CERTIFICATIONS SECTION (Fancy) =====*/
+/* 
+  Assumes you have color variables like:
+  :root {
+    --hue-color: 224; /* or your preferred hue */
+    --first-color: hsl(var(--hue-color), 89%, 60%); /* Primary Blue */
+    --second-color: hsl(var(--hue-color), 56%, 12%); /* Darker text color */
+  }
+*/
+
+/*===== CERTIFICATIONS SECTION (Fancy, Blue Only) =====*/
 .certifications {
   padding: 2rem 0;
   text-align: center;
 }
 
-/* Container: flex layout for side-by-side, wraps on smaller screens */
 .certifications__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px; 
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* 
-  CARD STYLES:
-  1) A pseudo-element with a gradient border
-  2) Slight 3D tilt & shadow on hover
-*/
+/* Card container */
 .certifications__item {
-  position: relative; /* For the pseudo-element border */
+  position: relative;
   background-color: #fff;
   border-radius: 12px;
   padding: 1rem;
-  width: 250px; /* Fixed card width (adjust as needed) */
+  width: 250px; /* Adjust as needed for your layout */
   box-sizing: border-box;
+
   transform-style: preserve-3d;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* 
-  The gradient border is made by an absolutely positioned pseudo-element 
-  that sits behind the card. 
-*/
+/* Gradient border using a pseudo-element */
 .certifications__item::before {
   content: "";
   position: absolute;
   z-index: -1; /* Behind the card */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   border-radius: 12px;
-  background: linear-gradient(45deg, #85FFBD, #FFFB7D); /* Feel free to tweak colors */
-  /* Slightly bigger than the card so it shows around the edges */
+
+  /* 
+    A gradient from your primary blue to a slightly darker blue 
+    (still in the same hue). 
+  */
+  background: linear-gradient(
+    45deg, 
+    var(--first-color), 
+    hsl(var(--hue-color), 89%, 50%)
+  );
+
+  /* Slightly larger than the card so it shows around the edges */
   margin: -2px;
 }
 
-/* Hover: slight tilt, lift, and shadow */
+/* Hover tilt + shadow */
 .certifications__item:hover {
-  transform: translateY(-4px) rotateY(4deg); 
+  transform: translateY(-4px) rotateY(4deg);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* The clickable image container */
+/* Image wrapper */
 .certifications__img {
   width: 100%;
   margin: 0 auto;
@@ -660,28 +670,22 @@ img {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* The actual image: subtle zoom/dim on hover */
+/* Actual <img> hover effect */
 .certifications__img img {
   width: 100%;
   height: auto;
   display: block;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
 .certifications__img:hover img {
   transform: scale(1.05);
   opacity: 0.9;
 }
 
-/* 
-  If you want the AWS card smaller than the others, 
-  override its width here:
-*/
+/* If you want the AWS card smaller: */
 .certifications__aws {
   width: 220px;
 }
-
-
 
 
 
