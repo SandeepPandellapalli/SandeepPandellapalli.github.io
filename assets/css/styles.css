@@ -261,7 +261,7 @@ img {
 /* Each image: reduced height, maintain aspect ratio */
 .transformation__img {
   max-height: 200px;  /* Limit the height */
-  width: auto;        /* Let the width scale to maintain aspect ratio */
+  width: 300px;        /* Let the width scale to maintain aspect ratio */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   object-fit: cover;  /* If the image is larger, it may crop. Remove if you want no crop. */
