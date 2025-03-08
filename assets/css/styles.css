@@ -273,13 +273,18 @@ img {
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
+
 .experience__item:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
+/* Left column: fixed width */
 .experience__left {
-  display: grid;
+  flex: 0 0 220px; /* 220px is just an example; pick a width that fits your content */
+  text-align: center; 
+  margin-right: 1rem; /* Gap between columns */
+}
   /* Make two rows: 
      1) auto row for the company name 
      2) a flexible row that fills remaining space */
@@ -291,6 +296,7 @@ img {
 }
 
 
+/* Right column: fills remaining space */
 /* Right column: fills remaining space */
 .experience__right {
   flex: 1;
@@ -370,6 +376,7 @@ img {
     width: 100%;
   }
 }
+
 
 
 
