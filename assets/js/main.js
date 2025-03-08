@@ -94,5 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
       gokartVideo.volume = 0.2; // 20% volume
     });
   }
+
+// Revealing the certifications section items
+sr.reveal('.certifications__item', {
+  interval: 100 // Reveals each certification item sequentially with a small delay
+});
+
 });
 
