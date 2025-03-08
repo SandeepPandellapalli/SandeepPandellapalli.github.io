@@ -303,8 +303,14 @@ img {
 }
 
 .experience__company-name {
-  /* By default, it will be in the first row at the top */
-  margin-bottom: 1rem; 
+  /* Plain text styling */
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--second-color); /* or simply #000 if you prefer */
+  background: none;          /* Remove blue background */
+  border-radius: 0;          /* Remove badge shape */
+  padding: 0;                /* Remove badge padding */
+  margin-bottom: 1rem;       /* Spacing if desired */
 }
 
 
@@ -338,7 +344,6 @@ img {
   border-radius: 4px;
   margin-bottom: 1rem;
   font-size: 1rem;
-  font-weight: bold;
 }
 
 .experience__dates {
