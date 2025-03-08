@@ -261,11 +261,11 @@ img {
 }
 
 .experience__item {
-  /* FLEX layout with equal column heights */
-  display: flex; 
-  align-items: stretch;  /* Ensures left & right columns share full height */
+  display: flex;
+  /* Use align-items: flex-start so the top edges of both columns line up */
+  align-items: flex-start;
 
-  /* Card styling */
+  /* Keep your existing "card" styling */
   background: linear-gradient(135deg, #f9f9f9, #ffffff);
   border-left: 4px solid var(--first-color);
   border-radius: 12px;
@@ -282,15 +282,16 @@ img {
 
 /* Left column: fixed width, centered content */
 .experience__left {
-  flex: 0 0 220px; /* Adjust width as needed */
+  /* Fixed width to keep bullets aligned on the right */
+  flex: 0 0 220px;
   margin-right: 1rem;
 
-  /* Center everything in this column vertically + horizontally */
+  /* Remove vertical centering */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: center;   /* or flex-start if you prefer left alignment */
+  justify-content: flex-start;  /* ensures content starts at the top */
+  text-align: center; 
 }
 
 /* Right column: fills remaining space, bullet points remain top-aligned */
