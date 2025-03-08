@@ -597,8 +597,20 @@ img {
 
 /*===== CERTIFICATIONS SECTION =====*/
 
-.certifications {
-  padding: 2rem 0;
+/*===== BASIC RESETS (optional) =====*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*===== CERTIFICATIONS SECTION =====*/
+
+.section-title {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-size: 2rem;
+  color: #333;
 }
 
 .certifications__container {
@@ -607,16 +619,18 @@ img {
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 2rem;
 }
 
 .certifications__item {
   text-align: center;
 }
+
+/* Container with fixed height for uniform images */
 .certifications__img {
   position: relative;
   width: 100%;
-  height: 250px; /* Fixed height (adjust as you like) */
+  height: 250px; /* Set the desired height */
   overflow: hidden;
   border-radius: 8px;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -628,23 +642,22 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Crops image to fill container */
+  object-fit: cover;
   display: block;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* Hover effect remains the same */
+/* Hover zoom effect */
 .certifications__img:hover img {
   transform: scale(1.05);
   opacity: 0.9;
 }
 
-
 .certifications__title {
   margin-top: 0.5rem;
   font-size: 1rem;
   font-weight: bold;
-  color: var(--second-color); /* Adjust to your desired color */
+  color: #111; /* Adjust to your brand color if you have variables */
 }
 
 
