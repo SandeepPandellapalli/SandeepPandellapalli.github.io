@@ -595,48 +595,72 @@ img {
     background-color: var(--first-color-alt); /* Slightly darker on hover */
 }
 
-/*===== CERTIFICATIONS SECTION (Enhanced) =====*/
+/*===== CERTIFICATIONS SECTION (Fancy) =====*/
 .certifications {
   padding: 2rem 0;
-  text-align: center; /* Centers the section title */
+  text-align: center;
 }
 
+/* Container: flex layout for side-by-side, wraps on smaller screens */
 .certifications__container {
   display: flex;
-  flex-wrap: wrap;         /* Allow wrapping on smaller screens */
-  justify-content: center; /* Center them in the row */
-  gap: 40px;               /* Space between items */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px; 
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Each item is a card with background, padding, etc. */
+/* 
+  CARD STYLES:
+  1) A pseudo-element with a gradient border
+  2) Slight 3D tilt & shadow on hover
+*/
 .certifications__item {
-  background-color: #fff;  
-  border-radius: 10px;
+  position: relative; /* For the pseudo-element border */
+  background-color: #fff;
+  border-radius: 12px;
   padding: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  /* Force a fixed width so they stay side by side on larger screens */
-  width: 300px;  /* Adjust to taste; they’ll wrap if the screen is too narrow */
-  box-sizing: border-box; /* Ensure padding doesn't add to total width */
+  width: 250px; /* Fixed card width (adjust as needed) */
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+/* 
+  The gradient border is made by an absolutely positioned pseudo-element 
+  that sits behind the card. 
+*/
+.certifications__item::before {
+  content: "";
+  position: absolute;
+  z-index: -1; /* Behind the card */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  background: linear-gradient(45deg, #85FFBD, #FFFB7D); /* Feel free to tweak colors */
+  /* Slightly bigger than the card so it shows around the edges */
+  margin: -2px;
+}
+
+/* Hover: slight tilt, lift, and shadow */
 .certifications__item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px) rotateY(4deg); 
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* The clickable image container */
 .certifications__img {
-  width: 100%;   /* Fill the card's width (250px) */
+  width: 100%;
   margin: 0 auto;
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* The actual image */
+/* The actual image: subtle zoom/dim on hover */
 .certifications__img img {
   width: 100%;
   height: auto;
@@ -644,16 +668,19 @@ img {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Slight zoom + dim on hover */
 .certifications__img:hover img {
   transform: scale(1.05);
   opacity: 0.9;
 }
 
-/* If you want the first item (AWS) smaller, override here */
+/* 
+  If you want the AWS card smaller than the others, 
+  override its width here:
+*/
 .certifications__aws {
-  width: 220px; /* Slightly smaller card, if desired */
+  width: 220px;
 }
+
 
 
 
