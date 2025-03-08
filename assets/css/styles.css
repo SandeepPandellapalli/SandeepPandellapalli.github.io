@@ -235,35 +235,56 @@ img {
 }
 
 /* ===== ABOUT =====*/
-
-/* Container for the 3 images in a row */
-.gokart__gallery {
-  display: flex;             /* Horizontal layout */
-  justify-content: center;   /* Center them horizontally */
-  gap: 1rem;                 /* Space between images */
-  margin-top: 2rem;          /* Spacing above the gallery */
-  flex-wrap: wrap;           /* Allows wrapping on smaller screens if needed */
+/*===== TRANSFORMATION SECTION (GoKart Progress) =====*/
+.transformation__section {
+  margin-top: 2rem; /* Spacing above the transformation section */
 }
 
-/* Each GoKart image styling */
-.gokart__img {
-  width: 250px;      /* Fixed width (adjust to your preference) */
-  height: auto;      /* Maintain aspect ratio */
+.transformation__heading {
+  text-align: center;
+  font-size: 1.5rem;      /* Adjust heading size */
+  margin-bottom: 1rem;
+  margin-top: 2rem;       /* Spacing above each heading */
+  color: var(--second-color); /* Or use your preferred color */
+}
+
+/* Horizontal row of images + arrows */
+.transformation__gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;             /* Space between images/arrows */
+  flex-wrap: wrap;       /* Allows wrapping on smaller screens */
+  margin-bottom: 2rem;
+}
+
+/* Each image: reduced height, maintain aspect ratio */
+.transformation__img {
+  max-height: 200px;  /* Limit the height */
+  width: auto;        /* Let the width scale to maintain aspect ratio */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  object-fit: cover;  /* If the image is larger, it may crop. Remove if you want no crop. */
 }
 
-/* Container for the video below the gallery */
-.gokart__video-container {
-  margin-top: 2rem;         /* Spacing above the video */
+/* Arrows between images */
+.transformation__arrow {
+  font-size: 2rem;
+  color: var(--first-color); /* Or another accent color */
+  font-weight: bold;
+}
+
+/* Video container: center the video */
+.transformation__video-container {
   display: flex;
-  justify-content: center;  /* Center the video horizontally */
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
-/* The video element itself */
-.gokart__video {
-  max-width: 600px;  /* Constrain video width on larger screens */
-  width: 100%;       /* Let it shrink on small screens */
+/* Video styling */
+.transformation__video {
+  max-width: 600px;  /* Constrain video on large screens */
+  width: 100%;       /* Responsive scaling on smaller devices */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
