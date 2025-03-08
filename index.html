@@ -277,20 +277,44 @@
 
 
 
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
+    <!--===== CONTACT =====-->
+<section class="contact section" id="contact">
+  <h2 class="section-title">Contact</h2>
 
-                <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Send" class="contact__button button">
-                    </form>
-                </div>
-            </section>
-        </main>
+  <div class="contact__container bd-grid">
+    <!-- Replace "YOUR_FORM_ID" with your actual Formspree endpoint -->
+    <form action="https://formspree.io/f/mdkenpoo" method="POST" class="contact__form">
+      <!-- "name" attributes are important for sending data properly -->
+      <input 
+        type="text" 
+        name="name" 
+        placeholder="Name" 
+        class="contact__input" 
+        required
+      >
+      
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="Email" 
+        class="contact__input" 
+        required
+      >
+      
+      <textarea 
+        name="message" 
+        placeholder="Message" 
+        cols="0" 
+        rows="10" 
+        class="contact__input" 
+        required
+      ></textarea>
+      
+      <button type="submit" class="contact__button button">Send</button>
+    </form>
+  </div>
+</section>
+
 
         <!--===== FOOTER =====-->
         <footer class="footer">
