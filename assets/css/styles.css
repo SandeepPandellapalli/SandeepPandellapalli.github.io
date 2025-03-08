@@ -431,10 +431,7 @@ img {
     transition: background 0.3s ease-in-out;
 }
 
-
-
-
-/* ===== CONTACT =====*/
+/*===== CONTACT =====*/
 .contact__input {
   width: 100%;
   font-size: var(--normal-font-size);
@@ -445,13 +442,23 @@ img {
   outline: none;
   margin-bottom: var(--mb-4);
 }
+
 .contact__button {
-  display: block;
+  display: inline-block;
   border: none;
   outline: none;
   font-size: var(--normal-font-size);
   cursor: pointer;
-  margin-left: auto;
+  padding: 0.75rem 1.5rem; /* Extra padding for a nicer look */
+  background-color: var(--first-color); /* Your brand color */
+  color: #fff; /* White text */
+  border-radius: 0.5rem;
+  font-weight: var(--font-semi);
+  transition: background-color 0.3s ease;
+}
+
+.contact__button:hover {
+  background-color: #2E5BB0; /* Slightly darker on hover (example) */
 }
 
 
