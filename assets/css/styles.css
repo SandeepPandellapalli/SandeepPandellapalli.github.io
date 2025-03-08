@@ -595,6 +595,50 @@ img {
     background-color: var(--first-color-alt); /* Slightly darker on hover */
 }
 
+/*===== CERTIFICATIONS SECTION =====*/
+
+.certifications {
+  padding: 2rem 0;
+}
+
+.certifications__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.certifications__item {
+  text-align: center;
+}
+
+.certifications__img {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.certifications__img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.certifications__img:hover img {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.certifications__title {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--second-color); /* Adjust to your desired color */
+}
+
 
 /* ===== FOOTER =====*/
 .footer {
