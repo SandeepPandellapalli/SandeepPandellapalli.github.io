@@ -528,28 +528,38 @@ img {
 
 .work__item {
   display: flex;
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center align children */
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Container for the image with a fixed height */
 .work__img {
-  width: 100%; /* Full width to the container */
-  margin-bottom: 0.5rem; /* Space between the image and the title */
-  overflow: hidden; /* Prevents the image from overflowing its container when zooming */
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition for zoom and opacity */
+  position: relative;
+  width: 100%;
+  height: 200px; /* Adjust to your preferred uniform height */
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  /* Keep your existing transitions or add new ones if needed */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
+
+/* Absolutely position the <img> to fill the container */
 .work__img img {
-  width: 100%; /* Image fills the width of its container */
-  height: auto; /* Maintain image aspect ratio */
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Ensures the transition is smooth */
-  transform-origin: center; /* Ensures the zoom effect is centered */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Crops the image to fill the box */
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 /* New hover effects */
 .work__img:hover img {
-  transform: scale(1.1); /* Scales the image up to create a zoom effect */
-  opacity: 0.8; /* Reduces the opacity to 50% */
+  transform: scale(1.1);
+  opacity: 0.8;
 }
 
 
