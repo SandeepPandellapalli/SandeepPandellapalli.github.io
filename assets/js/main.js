@@ -44,32 +44,38 @@ window.addEventListener('scroll', scrollActive)
 
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
-    origin: 'top',
-    distance: '60px',
-    duration: 2000,
-    delay: 200,
-//     reset: true
+  origin: 'top',
+  distance: '60px',
+  duration: 1000, // Reduced from 2000 to 1000 ms
+  delay: 100,     // Reduced from 200 to 100 ms
+  // reset: true
 });
 
-sr.reveal('.home__data, .about__img',{}); 
-sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
-sr.reveal('.home__social-icon, .work__title' ,{ interval: 200}); 
-sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+sr.reveal('.home__data, .about__img');
+sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img', {
+  delay: 200
+});
+sr.reveal('.home__social-icon, .work__title', {
+  interval: 100
+});
+sr.reveal('.skills__data, .work__img, .contact__input', {
+  interval: 100
+});
 
-// Revealing the skills section categories
+// Reveal the skills categories more quickly
 sr.reveal('.skills__category', {
-    interval: 100 // Small interval for sequential reveal of each category
+  interval: 50 // Lower interval -> faster sequence
 });
 
-// Revealing the headings within each category with no additional delay
+// Reveal the headings a bit sooner
 sr.reveal('.skills__heading', {
-    delay: 500 // Slightly later than the category itself
+  delay: 300  // Reduced from 500
 });
 
-// Revealing each skill within the categories with a stagger to follow the headings closely
+// Reveal each skill button faster
 sr.reveal('.skill__button', {
-    interval: 50, // Stagger each button to follow quickly after the heading
-    delay: 600 // Starts revealing skills shortly after the heading is shown
+  interval: 30, // Faster stagger
+  delay: 400    // Reduced from 600
 });
 
 ScrollReveal().reveal('.experience__item', {
