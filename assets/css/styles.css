@@ -618,7 +618,7 @@ img {
 
 .certifications__img {
   /* Fixed width for smaller images */
-  width: 150px;      /* Adjust to your liking (e.g., 150px, 200px, etc.) */
+  width: 300px;      /* Adjust to your liking (e.g., 150px, 200px, etc.) */
   display: block;
   margin: 0 auto;    /* Centers each item if narrower than the container */
   border-radius: 8px;
