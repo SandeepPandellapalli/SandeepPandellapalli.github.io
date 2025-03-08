@@ -596,39 +596,38 @@ img {
 }
 
 /*===== CERTIFICATIONS SECTION =====*/
-/*===== CERTIFICATIONS SECTION =====*/
 .certifications {
   padding: 2rem 0;
-  text-align: center; /* Centers the heading */
+  text-align: center; /* Center the heading */
 }
 
 .certifications__container {
-  /* A simple flex layout for side-by-side images */
   display: flex;
-  justify-content: center; /* Center them horizontally */
-  gap: 20px;               /* Spacing between images */
-  flex-wrap: wrap;         /* Wrap on smaller screens */
+  justify-content: center; 
+  flex-wrap: wrap;
+  gap: 40px;          /* Spacing between certificates */
   max-width: 1200px;
-  margin: 0 auto;          /* Center the container in the page */
+  margin: 0 auto;
 }
 
-.certifications__item {
-  /* Optional if you want additional styling per item */
-}
-
+/* Default size for all certifications */
 .certifications__img {
-  /* Fixed width for smaller images */
-  width: 300px;      /* Adjust to your liking (e.g., 150px, 200px, etc.) */
+  width: 300px;       /* Adjust as needed for normal items */
   display: block;
-  margin: 0 auto;    /* Centers each item if narrower than the container */
+  margin: 0 auto;
   border-radius: 8px;
-  overflow: hidden;  /* Ensures rounded corners apply to the image */
+  overflow: hidden;
 }
 
 .certifications__img img {
-  width: 100%;   /* Fill the parent container’s width */
-  height: auto;  /* Maintain aspect ratio */
+  width: 100%;
+  height: auto;
   display: block;
+}
+
+/* Override for AWS item to make it smaller */
+.certifications__aws .certifications__img {
+  width: 180px;       /* Smaller width for the first (AWS) item */
 }
 
 
