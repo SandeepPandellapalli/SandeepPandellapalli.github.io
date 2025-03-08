@@ -95,10 +95,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-// Revealing the certifications section items
-//sr.reveal('.certifications__item', {
-//  interval: 100 // Reveals each certification item sequentially with a small delay
-//});
+//Revealing the certifications section items
+sr.reveal('.certifications__item', {
+ interval: 100 // Reveals each certification item sequentially with a small delay
+});
 
 });
 
