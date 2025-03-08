@@ -618,7 +618,7 @@ img {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   /* Force a fixed width so they stay side by side on larger screens */
-  width: 250px;  /* Adjust to taste; they’ll wrap if the screen is too narrow */
+  width: 300px;  /* Adjust to taste; they’ll wrap if the screen is too narrow */
   box-sizing: border-box; /* Ensure padding doesn't add to total width */
 }
 
