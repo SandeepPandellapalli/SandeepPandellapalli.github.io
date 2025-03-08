@@ -86,3 +86,13 @@ ScrollReveal().reveal('.experience__item', {
   interval: 200
 });
 
+/*===== VIDEO VOLUME CONTROL (20%) =====*/
+document.addEventListener('DOMContentLoaded', () => {
+  const gokartVideo = document.getElementById('gokartVideo');
+  if (gokartVideo) {
+    gokartVideo.addEventListener('play', () => {
+      gokartVideo.volume = 0.2; // 20% volume
+    });
+  }
+});
+
