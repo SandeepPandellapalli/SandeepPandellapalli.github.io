@@ -301,7 +301,6 @@ img {
 .experience__company-name {
   /* Example plain text styling */
   font-size: 1.2rem;
-  font-weight: bold;
   color: var(--second-color);
   margin-bottom: 1rem;
 }
@@ -332,6 +331,7 @@ img {
   border-radius: 4px;
   margin-bottom: 1rem;
   font-size: 1rem;
+  font-weight: bold;
 }
 
 .experience__dates {
@@ -340,6 +340,7 @@ img {
   padding: 4px 8px;
   border-radius: 16px;
   font-size: 0.875rem;
+  font-weight: bold;
 }
 
 .experience__right ul {
