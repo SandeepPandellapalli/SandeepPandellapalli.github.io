@@ -598,50 +598,24 @@ img {
 /*===== CERTIFICATIONS SECTION =====*/
 
 /*===== CERTIFICATIONS SECTION (Basic Version) =====*/
-
 .certifications {
+  /* Some spacing around the section */
   padding: 2rem 0;
-  text-align: center; /* Center the heading, optional */
+  text-align: center; /* Center the heading and content */
 }
 
-.certifications__container {
-  /* A simple flex layout so images wrap and stay visible */
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto; /* Center the container on the page */
-  justify-content: center;
+.cert-item {
+  /* Optional: Add spacing or alignment for the single item */
+  margin-top: 1rem;
 }
 
-.certifications__item {
-  /* Each certification is stacked: image + optional title */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.certifications__img {
-  /* No fixed width/height, so images show at their natural ratio */
-  display: block;      /* or inline-block, either works */
-  margin: 0 auto;      /* center them if they're smaller than container */
-  border-radius: 8px;  /* optional corner rounding */
-  overflow: hidden;    /* so corners are actually rounded */
-}
-
-.certifications__img img {
-  max-width: 300px;  /* Limit the maximum width so they don't grow too large */
-  width: 100%;       /* Scales down on smaller screens */
-  height: auto;      /* Keep aspect ratio */
-  display: block;
-  /* No transitions, object-fit, etc. */
-}
-
-.certifications__title {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  color: var(--second-color); /* Or any color you prefer */
+.cert-item img {
+  /* Make the image responsive and give it a subtle style */
+  max-width: 300px;  /* Limit how wide it can get */
+  height: auto;      /* Keep the aspect ratio */
+  border-radius: 8px;
+  cursor: pointer;   /* Show a pointer on hover */
+  border: 1px solid #ddd; /* Subtle border, optional */
 }
 
 
