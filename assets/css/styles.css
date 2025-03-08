@@ -251,6 +251,7 @@ img {
 }
 
 /*===== EXPERIENCE SECTION =====*/
+
 /*===== EXPERIENCE SECTION =====*/
 .experience {
   padding: 2rem 0;
@@ -261,11 +262,8 @@ img {
 }
 
 .experience__item {
-  display: flex;
-  /* Use align-items: flex-start so the top edges of both columns line up */
-  align-items: flex-start;
-
-  /* Keep your existing "card" styling */
+  display: flex; 
+  align-items: stretch; /* Ensures left & right columns share the same height */
   background: linear-gradient(135deg, #f9f9f9, #ffffff);
   border-left: 4px solid var(--first-color);
   border-radius: 12px;
@@ -280,32 +278,35 @@ img {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* Left column: fixed width, centered content */
+/* Left column: pinned name at top, logo centered below */
 .experience__left {
-  /* Fixed width to keep bullets aligned on the right */
-  flex: 0 0 220px;
-  margin-right: 1rem;
-
-  /* Remove vertical centering */
   display: flex;
   flex-direction: column;
-  align-items: center;   /* or flex-start if you prefer left alignment */
-  justify-content: flex-start;  /* ensures content starts at the top */
-  text-align: center; 
+  align-items: center;       /* Horizontal center if desired */
+  justify-content: flex-start; 
+  flex: 0 0 220px;           /* Fixed width for consistent bullet alignment */
+  margin-right: 1rem;
+  text-align: center;        /* Or left if you prefer */
 }
 
-/* Right column: fills remaining space, bullet points remain top-aligned */
-.experience__right {
-  flex: 1;
-}
-
+/* Company name at the top */
 .experience__company-name {
-  /* Example plain text styling */
-  font-size: 1.2rem;
-  color: var(--second-color);
   margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--second-color); /* Use your brand color or #000 */
 }
 
+/* Container to vertically center the logo in leftover space */
+.logo-container {
+  flex: 1;                   /* Occupies remaining vertical space */
+  display: flex;
+  align-items: center;       /* Vertically center the image */
+  justify-content: center;   /* Horizontally center the image */
+  width: 100%;
+}
+
+/* Logo styling */
 .experience__logo {
   width: 200px;  /* Adjust as needed */
   height: auto;
@@ -316,40 +317,41 @@ img {
   transform: scale(1.02);
 }
 
-/* Position/dates container, bullet list, etc. */
+/* Right column: bullet points remain top-aligned */
+.experience__right {
+  flex: 1;
+}
+
+/* Position & dates container */
 .experience__position-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
 }
-
 .experience__position {
   display: inline-block;
-  background-color: var(--first-color);
+  background-color: var(--first-color); /* Blue background */
   color: #fff;
   padding: 6px 10px;
   border-radius: 4px;
   margin-bottom: 1rem;
   font-size: 1rem;
-  font-weight: bold;
 }
-
 .experience__dates {
   background-color: #eceff1;
   color: var(--second-color);
   padding: 4px 8px;
   border-radius: 16px;
   font-size: 0.875rem;
-  font-weight: bold;
 }
 
+/* Bullet points */
 .experience__right ul {
   list-style-type: disc;
-  margin-left: 1.5rem; 
+  margin-left: 1.5rem;
   padding: 0;
 }
-
 .experience__right li {
   margin-bottom: 0.5rem;
   line-height: 1.4;
@@ -359,13 +361,16 @@ img {
 @media screen and (max-width: 768px) {
   .experience__item {
     flex-direction: column;
-    align-items: flex-start;  /* Stacks columns, bullets at top */
+    align-items: flex-start;
   }
   .experience__left {
     margin-bottom: 1rem;
-    flex: auto; 
+    flex: auto;
+    display: block;
     text-align: left;
-    display: block; /* Let content flow normally on small screens */
+  }
+  .logo-container {
+    margin-top: 1rem;
   }
   .experience__right {
     width: 100%;
