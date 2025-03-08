@@ -118,17 +118,22 @@
     </div>
 
     <!-- Heading for video -->
-    <h3 class="transformation__heading">To This</h3>
-    
-    <!-- Video container (final product racing) -->
-    <div class="transformation__video-container">
-       <video width="500" height="400" controls autoplay muted>
-          <source src="assets/img/go-kart/VID_20190808_154650.mov" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+      <!-- "To This" heading -->
+<h3 class="transformation__heading">To This</h3>
 
-
-    </div>
+<div class="transformation__video-container">
+  <video 
+    id="gokartVideo"         <!-- ADD THIS ID -->
+    class="transformation__video" 
+    controls
+  >
+    <source 
+      src="assets/img/go-kart/VID_20190808_154650.mov" 
+      type="video/mp4"
+    >
+    Your browser does not support the video tag.
+  </video>
+</div>
   </div>
 </section>
 
