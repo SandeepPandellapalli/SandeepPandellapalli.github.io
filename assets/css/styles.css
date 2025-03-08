@@ -235,20 +235,39 @@ img {
 }
 
 /* ===== ABOUT =====*/
-.about__container {
-  row-gap: 2rem;
-  text-align: center;
+
+/* Container for the 3 images in a row */
+.gokart__gallery {
+  display: flex;             /* Horizontal layout */
+  justify-content: center;   /* Center them horizontally */
+  gap: 1rem;                 /* Space between images */
+  margin-top: 2rem;          /* Spacing above the gallery */
+  flex-wrap: wrap;           /* Allows wrapping on smaller screens if needed */
 }
-.about__subtitle {
-  margin-bottom: var(--mb-2);
+
+/* Each GoKart image styling */
+.gokart__img {
+  width: 250px;      /* Fixed width (adjust to your preference) */
+  height: auto;      /* Maintain aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
-.about__img {
-  justify-self: center;
+
+/* Container for the video below the gallery */
+.gokart__video-container {
+  margin-top: 2rem;         /* Spacing above the video */
+  display: flex;
+  justify-content: center;  /* Center the video horizontally */
 }
-.about__img img {
-  width: 200px;
-  border-radius: 0.5rem;
+
+/* The video element itself */
+.gokart__video {
+  max-width: 600px;  /* Constrain video width on larger screens */
+  width: 100%;       /* Let it shrink on small screens */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+
 
 /*===== EXPERIENCE SECTION =====*/
 
