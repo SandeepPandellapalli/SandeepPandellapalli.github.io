@@ -596,41 +596,40 @@ img {
 }
 
 /*===== CERTIFICATIONS SECTION =====*/
-/*===== CERTIFICATIONS SECTION (Minimal) =====*/
-
+/*===== CERTIFICATIONS SECTION =====*/
 .certifications {
-  /* Matches your other sections' spacing */
   padding: 2rem 0;
-  text-align: center; /* Center the heading, optional */
+  text-align: center; /* Centers the heading */
 }
 
 .certifications__container {
-  /* Simple responsive grid */
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  /* A simple flex layout for side-by-side images */
+  display: flex;
+  justify-content: center; /* Center them horizontally */
+  gap: 20px;               /* Spacing between images */
+  flex-wrap: wrap;         /* Wrap on smaller screens */
   max-width: 1200px;
-  margin: 0 auto; /* Centers the grid on the page */
+  margin: 0 auto;          /* Center the container in the page */
 }
 
 .certifications__item {
-  /* No forced text styles; can add if you want titles below images */
+  /* Optional if you want additional styling per item */
 }
 
 .certifications__img {
+  /* Fixed width for smaller images */
+  width: 150px;      /* Adjust to your liking (e.g., 150px, 200px, etc.) */
   display: block;
-  margin: 0 auto;
+  margin: 0 auto;    /* Centers each item if narrower than the container */
   border-radius: 8px;
-  overflow: hidden;
-  /* No fixed height—images keep their aspect ratio */
+  overflow: hidden;  /* Ensures rounded corners apply to the image */
 }
 
 .certifications__img img {
-  width: 100%;    /* Scales to parent width */
-  height: auto;   /* Maintains aspect ratio */
+  width: 100%;   /* Fill the parent container’s width */
+  height: auto;  /* Maintain aspect ratio */
   display: block;
 }
-
 
 
 
