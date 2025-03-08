@@ -606,6 +606,7 @@ img {
 
 /*===== CERTIFICATIONS SECTION =====*/
 /*===== CERTIFICATIONS SECTION =====*/
+
 .certifications {
   padding: 2rem 0;
 }
@@ -623,19 +624,29 @@ img {
   text-align: center;
 }
 
+/* Fixed-size container for uniform images */
 .certifications__img {
-  display: block;
+  position: relative;
+  width: 200px;   /* Adjust to make images smaller or bigger */
+  height: 250px;  /* Adjust to control height */
+  margin: 0 auto; /* Center the image container horizontally */
   overflow: hidden;
   border-radius: 8px;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .certifications__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover; /* Crops the image to fill the container */
   display: block;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
+/* Hover zoom effect */
 .certifications__img:hover img {
   transform: scale(1.05);
   opacity: 0.9;
@@ -645,8 +656,9 @@ img {
   margin-top: 0.5rem;
   font-size: 1rem;
   font-weight: bold;
-  color: var(--second-color); /* Adjust to your desired color */
+  color: var(--second-color); /* Adjust to your brand color */
 }
+
 
 
 
