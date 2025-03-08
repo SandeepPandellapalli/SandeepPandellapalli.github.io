@@ -39,7 +39,9 @@
         </header>
 
         <main class="l-main">
+            
             <!--===== HOME =====-->
+            
             <section class="home bd-grid" id="home">
                <div class="home__data">
                     <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Sandeep</span><br> Data Engineer </h1>
@@ -68,12 +70,12 @@
                 </div>
             </section>
 
+
             <!--===== ABOUT =====-->
-            
 <section class="about section" id="about">
   <h2 class="section-title">About</h2>
-  
-  <!-- Existing text content -->
+
+  <!-- Existing About Content -->
   <div class="about__container bd-grid">
     <div class="about__content">
       <h2 class="about__subtitle"></h2>
@@ -82,34 +84,50 @@
     </div>
   </div>
 
-  <!-- GoKart images in a horizontal gallery -->
-  <div class="gokart__gallery">
-    <!-- Update these src attributes with your actual GitHub image URLs -->
-    <img 
-      src="assets/img/go-kart/IMG_5898.PNG" 
-      alt="GoKart Drawing" 
-      class="gokart__img"
-    >
-    <img 
-      src="assets/img/go-kart/IMG_20190307_185736_Original.jpg" 
-      alt="GoKart Manufacturing 1" 
-      class="gokart__img"
-    >
-    <img 
-      src="assets/img/go-kart/IMG_20190722_125922_Original.jpg" 
-      alt="GoKart Manufacturing 2" 
-      class="gokart__img"
-    >
-  </div>
+  <!-- Transformation Section -->
+  <div class="transformation__section">
+    <!-- Heading for images -->
+    <h3 class="transformation__heading">From This</h3>
+    
+    <!-- Horizontal row of 3 images with arrows in between -->
+    <div class="transformation__gallery">
+      <!-- 1st image: drawings of go kart -->
+      <img 
+        src="assets/img/go-kart/IMG_20190307_185736_Original.jpg" 
+        alt="GoKart Drawing" 
+        class="transformation__img"
+      >
+      
+      <div class="transformation__arrow">→</div>
 
-  <!-- Video of the final product (GoKart racing) -->
-  <div class="gokart__video-container">
-    <!-- Replace with your actual video link from GitHub or another host -->
-    <video class="gokart__video" controls>
-      <source src="assets/img/go-kart/VID_20190808_154650.mov" type="video/mp4">
-      <!-- Fallback text if video not supported -->
-      Your browser does not support the video tag.
-    </video>
+      <!-- 2nd image: manufacturing stage -->
+      <img 
+        src="assets/img/go-kart/IMG_20190307_185736_Original.jpg" 
+        alt="GoKart Manufacturing 1" 
+        class="transformation__img"
+      >
+      
+      <div class="transformation__arrow">→</div>
+
+      <!-- 3rd image: further manufacturing or assembly -->
+      <img 
+        src="assets/img/go-kart/IMG_20190722_125922_Original.jpg" 
+        alt="GoKart Manufacturing 2" 
+        class="transformation__img"
+      >
+    </div>
+
+    <!-- Heading for video -->
+    <h3 class="transformation__heading">To This</h3>
+    
+    <!-- Video container (final product racing) -->
+    <div class="transformation__video-container">
+      <video class="transformation__video" controls>
+        <!-- Update with your actual video link -->
+        <source src="assets/img/go-kart/VID_20190808_154650.mov" type="video/mp4"">
+        Your browser does not support the video tag.
+      </video>
+    </div>
   </div>
 </section>
 
