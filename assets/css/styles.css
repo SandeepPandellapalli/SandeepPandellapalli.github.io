@@ -605,12 +605,9 @@ img {
 }
 
 /*===== CERTIFICATIONS SECTION =====*/
-
-.section-title {
-  text-align: center;
-  margin: 2rem 0 1rem;
-  font-size: 2rem;
-  color: #333;
+/*===== CERTIFICATIONS SECTION =====*/
+.certifications {
+  padding: 2rem 0;
 }
 
 .certifications__container {
@@ -619,35 +616,26 @@ img {
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .certifications__item {
   text-align: center;
 }
 
-/* Container with fixed height for uniform images */
 .certifications__img {
-  position: relative;
-  width: 100%;
-  height: 250px; /* Set the desired height */
+  display: block;
   overflow: hidden;
   border-radius: 8px;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .certifications__img img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* Hover zoom effect */
 .certifications__img:hover img {
   transform: scale(1.05);
   opacity: 0.9;
@@ -657,8 +645,9 @@ img {
   margin-top: 0.5rem;
   font-size: 1rem;
   font-weight: bold;
-  color: #111; /* Adjust to your brand color if you have variables */
+  color: var(--second-color); /* Adjust to your desired color */
 }
+
 
 
 /* ===== FOOTER =====*/
