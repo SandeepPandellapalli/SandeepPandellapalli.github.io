@@ -250,7 +250,7 @@ img {
   border-radius: 0.5rem;
 }
 
-/*===== EXPERIENCE SECTION STYLES =====*/
+/*===== EXPERIENCE SECTION =====*/
 /*===== EXPERIENCE SECTION =====*/
 .experience {
   padding: 2rem 0;
@@ -261,9 +261,11 @@ img {
 }
 
 .experience__item {
+  /* FLEX layout with equal column heights */
   display: flex; 
-  align-items: flex-start;
-  /* Card styling from before (gradient, border, etc.) */
+  align-items: stretch;  /* Ensures left & right columns share full height */
+
+  /* Card styling */
   background: linear-gradient(135deg, #f9f9f9, #ffffff);
   border-left: 4px solid var(--first-color);
   border-radius: 12px;
@@ -273,56 +275,43 @@ img {
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-
 .experience__item:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* Left column: fixed width */
+/* Left column: fixed width, centered content */
 .experience__left {
-  flex: 0 0 220px; /* 220px is just an example; pick a width that fits your content */
-  text-align: center; 
-  margin-right: 1rem; /* Gap between columns */
-}
-  /* Make two rows: 
-     1) auto row for the company name 
-     2) a flexible row that fills remaining space */
-  grid-template-rows: auto 1fr;
-  align-items: center; 
-  text-align: center; /* If you also want to center horizontally */
-  /* set a fixed width if you're using a two-column layout:
-     flex: 0 0 220px; or similar. */
+  flex: 0 0 220px; /* Adjust width as needed */
+  margin-right: 1rem;
+
+  /* Center everything in this column vertically + horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-
-/* Right column: fills remaining space */
-/* Right column: fills remaining space */
+/* Right column: fills remaining space, bullet points remain top-aligned */
 .experience__right {
   flex: 1;
 }
 
 .experience__company-name {
-  /* Plain text styling */
+  /* Example plain text styling */
   font-size: 1.2rem;
   font-weight: bold;
-  color: var(--second-color); /* or simply #000 if you prefer */
-  background: none;          /* Remove blue background */
-  border-radius: 0;          /* Remove badge shape */
-  padding: 0;                /* Remove badge padding */
-  margin-bottom: 1rem;       /* Spacing if desired */
+  color: var(--second-color);
+  margin-bottom: 1rem;
 }
-
-
-
 
 .experience__logo {
-  /* By default, it will be in the second row, centered vertically 
-     because we used align-items: center. */
-  width: 200px;  /* Example size */
+  width: 200px;  /* Adjust as needed */
   height: auto;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
 }
-
 .experience__logo:hover {
   transform: scale(1.02);
 }
@@ -336,10 +325,9 @@ img {
 }
 
 .experience__position {
-  /* Badge styling */
   display: inline-block;
-  background-color: var(--first-color); /* Blue background (your primary color) */
-  color: #fff;                          /* White text */
+  background-color: var(--first-color);
+  color: #fff;
   padding: 6px 10px;
   border-radius: 4px;
   margin-bottom: 1rem;
@@ -353,7 +341,6 @@ img {
   border-radius: 16px;
   font-size: 0.875rem;
 }
-
 
 .experience__right ul {
   list-style-type: disc;
@@ -370,12 +357,13 @@ img {
 @media screen and (max-width: 768px) {
   .experience__item {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start;  /* Stacks columns, bullets at top */
   }
   .experience__left {
     margin-bottom: 1rem;
     flex: auto; 
     text-align: left;
+    display: block; /* Let content flow normally on small screens */
   }
   .experience__right {
     width: 100%;
