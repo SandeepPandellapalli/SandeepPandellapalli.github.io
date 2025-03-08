@@ -627,7 +627,7 @@ img {
 
 /* Override for the AWS item */
 .certifications__aws .certifications__img {
-  width: 180px !important; /* Force it smaller than 250px */
+  width: 250px !important; /* Force it smaller than 250px */
 }
 
 
