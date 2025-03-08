@@ -595,39 +595,63 @@ img {
     background-color: var(--first-color-alt); /* Slightly darker on hover */
 }
 
-/*===== CERTIFICATIONS SECTION =====*/
+/*===== CERTIFICATIONS SECTION (Enhanced) =====*/
 .certifications {
   padding: 2rem 0;
-  text-align: center; /* Center the heading */
+  text-align: center; /* Keep your section title centered */
 }
 
+/* Container: side-by-side layout, wraps on small screens */
 .certifications__container {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 40px;          /* Spacing between certificates */
+  gap: 40px;              /* Spacing between each cert card */
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Default size for all certifications */
-.certifications__img {
-  width: 300px;       /* Adjust as needed for normal items */
-  display: block;
-  margin: 0 auto;
-  border-radius: 8px;
-  overflow: hidden;
+/* Each item acts like a "card" */
+.certifications__item {
+  background-color: #fff; /* Card background (optional) */
+  border-radius: 10px;
+  padding: 1rem;          /* Space inside the card around the image */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Lift the card and add a soft shadow on hover */
+.certifications__item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* The clickable image container */
+.certifications__img {
+  position: relative;
+  width: 250px;       /* Default width for most items */
+  margin: 0 auto;     /* Center it horizontally within the card */
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* The actual <img> inside */
 .certifications__img img {
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Override for the AWS item */
+/* On hover, slightly zoom in and dim the image */
+.certifications__img:hover img {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Override for AWS item to make it smaller if you like */
 .certifications__aws .certifications__img {
-  width: 250px !important; /* Force it smaller than 250px */
+  width: 180px !important; /* Force smaller for the AWS cert */
 }
 
 
