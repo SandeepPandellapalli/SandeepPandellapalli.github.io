@@ -74,11 +74,11 @@ sr.reveal('.home__img', {
   // reset: false,  // If you only want it once
 });
 
-ScrollReveal().reveal('.home__blob-img', {
+sr.reveal('.home__blob-img', {
   origin: 'top',
   distance: '40px',
-  duration: 800,    // Shorter animation
-  delay: 50,        // Very small initial wait
+  duration: 800,
+  delay: 50,
   opacity: 0
 });
 
