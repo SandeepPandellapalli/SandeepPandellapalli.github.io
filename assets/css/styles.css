@@ -422,54 +422,78 @@ img {
 
 /* ===== SKILLS SECTION ===== */
 
+/* ===== SKILLS SECTION ===== */
+.skills {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+/* Container: grid layout for skill cards */
 .skills__container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    max-width: 900px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
+/* Each skill "card" */
 .skills__category {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  /* Light gradient background, optional */
+  background: linear-gradient(135deg, #f9f9f9, #ffffff);
+
+  /* Blue left border (similar to Experience) */
+  border-left: 4px solid var(--first-color);
+
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
+/* Hover lift effect */
+.skills__category:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Heading inside each card */
 .skills__heading {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
+/* The list of skill buttons */
 .skills__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
-/* ===== SKILL BUTTON STYLE (Same as Resume Button) ===== */
+/* Skill buttons themselves */
 .skill__button {
-    display: inline-block;
-    padding: 8px 16px;  /* Same padding as Resume button */
-    background-color: var(--first-color);  /* Blue background */
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 6px;  /* Rounded edges */
-    transition: background 0.3s ease-in-out;
-    font-size: var(--normal-font-size);
-    text-align: center;
+  display: inline-block;
+  padding: 8px 16px; /* Same padding as your Resume button */
+  background-color: var(--first-color); /* Blue background */
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease-in-out;
+  font-size: var(--normal-font-size);
+  text-align: center;
 }
 
 .skill__button:hover {
-    background-color: #2F3EB1 !important;  /* A slightly darker blue */
-    color: white !important;  /* Keep text color unchanged */
-    transition: background 0.3s ease-in-out;
+  background-color: #2F3EB1 !important; /* Slightly darker blue on hover */
+  color: #fff !important; 
+  transition: background 0.3s ease-in-out;
 }
+
 
 /*===== CONTACT =====*/
 .contact__input {
