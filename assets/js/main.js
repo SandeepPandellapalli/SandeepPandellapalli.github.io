@@ -102,3 +102,13 @@ sr.reveal('.certifications__item', {
 
 });
 
+// NEW: Reveal the "From This / To This" elements
+  sr.reveal('.transformation__heading, .transformation__arrow, .transformation__img, .transformation__video-container', {
+    distance: '50px',
+    duration: 800,
+    easing: 'ease-in-out',
+    origin: 'bottom',
+    interval: 200
+  });
+});
+
