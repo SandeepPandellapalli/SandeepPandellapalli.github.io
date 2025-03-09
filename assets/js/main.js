@@ -72,7 +72,7 @@ sr.reveal('.home__img', {
   opacity: 0,      // Ensures a nice fade from 0 to 1
   easing: 'ease-in-out',
   // reset: false,  // If you only want it once
-
+});
 // Reveal the skills categories more quickly
 sr.reveal('.skills__category', {
   interval: 50
