@@ -264,7 +264,8 @@ img {
 }
 
 .about__text {
-  text-align: left;  /* Explicitly left-aligns the paragraph text */
+  text-align: left;   /* Or justify, if you prefer a block-justified look */
+  line-height: 1.6;   /* Improves readability */
 }
 
 /*===== TRANSFORMATION SECTION =====*/
