@@ -236,9 +236,21 @@ img {
 
 /*===== ABOUT SECTION =====*/
 /*===== ABOUT SECTION =====*/
-
 .about {
-  /* If you have general styling for the .about section, place it here */
+  /* General styling for the .about section if needed */
+}
+
+/* Override .about__container or .bd-grid constraints to allow full width */
+.about__container.bd-grid {
+  max-width: none !important;  /* Remove any fixed max-width */
+  width: 100% !important;      /* Stretch full width */
+  margin: 0 !important;        /* Remove auto-centering margin */
+  padding: 0 2rem !important;  /* Optional side padding */
+  display: block !important;   /* Override any grid/flex if you prefer a single column */
+}
+
+.about__text {
+  text-align: left;  /* Explicitly left-aligns the paragraph text */
 }
 
 /*===== TRANSFORMATION SECTION =====*/
@@ -271,7 +283,6 @@ img {
   height: auto;      /* Maintains aspect ratio */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  /* Remove or comment out any old rules like max-height, object-fit, etc. */
 }
 
 /* Arrows between images */
@@ -295,6 +306,7 @@ img {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+
 
 
 /* ===== Media Queries for Smaller Screens ===== */
