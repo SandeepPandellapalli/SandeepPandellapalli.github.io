@@ -53,7 +53,7 @@ const sr = ScrollReveal({
 
 // Global ScrollReveal calls (not inside DOMContentLoaded yet)
 sr.reveal('.home__data, .about__img');
-sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img', {
+sr.reveal('.about__subtitle, .about__text, .skills__img', {
   delay: 200
 });
 sr.reveal('.home__social-icon, .work__title', {
@@ -62,6 +62,16 @@ sr.reveal('.home__social-icon, .work__title', {
 sr.reveal('.skills__data, .work__img, .contact__input', {
   interval: 100
 });
+
+// Add a dedicated reveal just for the home image
+sr.reveal('.home__img', {
+  origin: 'top',
+  distance: '60px',
+  duration: 1500,  // Slightly longer for a smoother effect
+  delay: 300,      // Starts after the text reveals
+  opacity: 0,      // Ensures a nice fade from 0 to 1
+  easing: 'ease-in-out',
+  // reset: false,  // If you only want it once
 
 // Reveal the skills categories more quickly
 sr.reveal('.skills__category', {
