@@ -236,6 +236,19 @@ img {
 
 /*===== ABOUT SECTION =====*/
 
+.highlight {
+  display: inline-block;                 /* Make it behave like a small “badge” */
+  background-color: var(--first-color);  /* Same color as your “Research Assistant” button */
+  color: #fff;                           /* White text */
+  padding: 6px 10px;                     /* Some padding for the pill shape */
+  border-radius: 4px;                    /* Rounded corners */
+  font-weight: bold;                     /* Make the text stand out */
+  margin: 0 3px;                         /* Tiny horizontal spacing if desired */
+  text-decoration: none;                 /* Remove any underline */
+  /* Adjust font-size if you want smaller or larger text */
+}
+
+
 /*===== ABOUT SECTION =====*/
 .about {
   /* General styling for the .about section if needed */
