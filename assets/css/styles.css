@@ -254,18 +254,17 @@ img {
   /* General styling for the .about section if needed */
 }
 
-/* Override .about__container or .bd-grid constraints to allow full width */
+/* Restore a typical centered container for .about__container */
 .about__container.bd-grid {
-  max-width: none !important;  /* Remove any fixed max-width */
-  width: 100% !important;      /* Stretch full width */
-  margin: 0 !important;        /* Remove auto-centering margin */
-  padding: 0 2rem !important;  /* Optional side padding */
-  display: block !important;   /* Override any grid/flex if you prefer a single column */
+  max-width: 1200px; /* Or 1024px, 900px, etc. to match your other sections */
+  margin: 0 auto;    /* Centers the container horizontally */
+  padding: 0 2rem;   /* Side padding so text isn’t flush against the edges */
+  display: block;    /* Single-column block layout */
 }
 
 .about__text {
-  text-align: left;   /* Or justify, if you prefer a block-justified look */
-  line-height: 1.6;   /* Improves readability */
+  text-align: left; /* Or justify if you prefer fully justified text */
+  line-height: 1.6; /* Improves readability */
 }
 
 /*===== TRANSFORMATION SECTION =====*/
@@ -277,25 +276,25 @@ img {
 .transformation__heading {
   text-align: center;
   font-size: 1.5rem;
-  margin-top: 2rem;    /* Space above each heading */
-  margin-bottom: 1rem; /* Space below heading before images/video */
+  margin-top: 2rem;    
+  margin-bottom: 1rem; 
   color: var(--second-color);
 }
 
 /* Horizontal row of images + arrows */
 .transformation__gallery {
   display: flex;
-  flex-wrap: wrap;           /* Wrap if screen too small */
-  align-items: center;       /* Vertically center images/arrows */
-  justify-content: center;   /* Center them horizontally */
-  gap: 1rem;                 /* Space between images/arrows */
-  margin-bottom: 2rem;       /* Space below the gallery before next heading */
+  flex-wrap: wrap;        
+  align-items: center;    
+  justify-content: center;
+  gap: 1rem;              
+  margin-bottom: 2rem;    
 }
 
 /* Force each image to be 200px wide, preserving aspect ratio */
 .transformation__img {
-  width: 200px;      /* Fixes image width */
-  height: auto;      /* Maintains aspect ratio */
+  width: 200px;      
+  height: auto;      
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
@@ -311,13 +310,13 @@ img {
 .transformation__video-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem; /* Space after the video if more content follows */
+  margin-bottom: 2rem;
 }
 
-/* Optional video styling class if you need it */
+/* Optional video styling */
 .transformation__video {
-  max-width: 600px;  
-  width: 100%;       
+  max-width: 600px;
+  width: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
