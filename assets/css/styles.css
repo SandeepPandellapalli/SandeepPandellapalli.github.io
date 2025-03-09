@@ -235,7 +235,6 @@ img {
 }
 
 /*===== ABOUT SECTION =====*/
-/*===== ABOUT SECTION =====*/
 .about {
   /* General styling for the .about section if needed */
 }
@@ -295,14 +294,25 @@ img {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+/* Make the "box" look like an experience card */
 .about__box {
+  display: flex; 
+  align-items: center; /* or flex-start if you prefer top alignment */
   background: linear-gradient(135deg, #f9f9f9, #ffffff);
-  border-left: 4px solid var(--first-color); /* Same blue left border as Experience items */
+  border-left: 4px solid var(--first-color);
   border-radius: 12px;
   padding: 1.5rem;
-  margin-bottom: 2rem; /* Space below the box */
+  margin-bottom: 2rem;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.about__box-container {
+  /* If your .experience__container is 1200px wide with auto margins, do: */
+  max-width: 1200px; 
+  margin: 0 auto;
+  /* row-gap if you want spacing, e.g., row-gap: 2rem; */
+  padding: 0 1.5rem; /* Optional side padding to match experience spacing */
 }
 
 .about__box:hover {
@@ -310,10 +320,11 @@ img {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* If you want left-aligned text inside the box, override here: */
+/* If you want the text inside to be left-aligned (instead of right) */
 .about__text {
   text-align: left; 
   line-height: 1.6;
+  margin: 0; /* Remove default margins if needed */
 }
 
 
