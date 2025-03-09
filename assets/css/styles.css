@@ -241,7 +241,7 @@ img {
 
 /* Center the container horizontally, but keep a max-width */
 .about__container.bd-grid {
-  max-width: 600px; /* Or another width that matches your site */
+  max-width: 450px; /* Or another width that matches your site */
   margin: 0 auto;    /* Centers container on the page */
   padding: 0 2rem;
   display: block;    /* Single-column layout */
