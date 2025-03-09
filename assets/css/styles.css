@@ -295,6 +295,27 @@ img {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+.about__box {
+  background: linear-gradient(135deg, #f9f9f9, #ffffff);
+  border-left: 4px solid var(--first-color); /* Same blue left border as Experience items */
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem; /* Space below the box */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.about__box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* If you want left-aligned text inside the box, override here: */
+.about__text {
+  text-align: left; 
+  line-height: 1.6;
+}
+
 
 /* Media Queries for smaller screens (unchanged) */
 @media (max-width: 768px) {
