@@ -321,6 +321,51 @@ img {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
+/* ===== Media Queries for Smaller Screens ===== */
+
+/* For tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+
+  /* Reduce side padding, allow more room for text */
+  .about__container.bd-grid {
+    padding: 0 1rem;
+  }
+
+  /* Slightly shrink the transformation images */
+  .transformation__img {
+    width: 160px; /* Adjust as needed */
+  }
+
+  /* Arrows can stay, but if you want them smaller, do: */
+  .transformation__arrow {
+    font-size: 1.5rem;
+  }
+}
+
+/* For phones and very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+
+  /* Stack images vertically and hide arrows, or reduce them further */
+  .transformation__gallery {
+    flex-direction: column; 
+  }
+
+  .transformation__arrow {
+    display: none; 
+    /* or font-size: 1.2rem if you still want them, just smaller */
+  }
+
+  /* Make images a comfortable size for small screens */
+  .transformation__img {
+    width: 70%;     /* e.g., 70% of the container width */
+    max-width: 250px; 
+  }
+  
+  /* Adjust video width if needed */
+  .transformation__video-container {
+    padding: 0 1rem;
+  }
+}
 
 
 /*===== EXPERIENCE SECTION =====*/
