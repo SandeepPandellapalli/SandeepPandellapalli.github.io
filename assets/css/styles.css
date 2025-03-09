@@ -249,22 +249,20 @@ img {
 }
 
 /* Horizontal row of images + arrows */
-.transformation__gallery {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;             /* Space between images/arrows */
-  flex-wrap: wrap;       /* Allows wrapping on smaller screens */
-  margin-bottom: 2rem;
+.transformation__heading {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2rem;   /* Space from previous content */
+  margin-bottom: 1rem;/* Space from heading to gallery/video */
+  color: var(--second-color);
 }
 
-/* Each image: reduced height, maintain aspect ratio */
-.transformation__img {
-  max-height: 400px;  /* Limit the height */
-  width: 300px;        /* Let the width scale to maintain aspect ratio */
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  object-fit: cover;  /* If the image is larger, it may crop. Remove if you want no crop. */
+/* Apply the same bottom margin to both the images and video */
+.transformation__gallery,
+.transformation__video-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem; /* Ensures uniform space before the next heading */
 }
 
 /* Arrows between images */
@@ -274,12 +272,6 @@ img {
   font-weight: bold;
 }
 
-/* Video container: center the video */
-.transformation__video-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
 
 /* Video styling */
 .transformation__video {
