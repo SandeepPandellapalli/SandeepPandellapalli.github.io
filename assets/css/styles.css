@@ -235,36 +235,22 @@ img {
 }
 
 /*===== ABOUT SECTION =====*/
-
-.highlight {
-  display: inline-block;                 /* Make it behave like a small “badge” */
-  background-color: var(--first-color);  /* Same color as your “Research Assistant” button */
-  color: #fff;                           /* White text */
-  padding: 6px 10px;                     /* Some padding for the pill shape */
-  border-radius: 4px;                    /* Rounded corners */
-  font-weight: bold;                     /* Make the text stand out */
-  margin: 0 3px;                         /* Tiny horizontal spacing if desired */
-  text-decoration: none;                 /* Remove any underline */
-  /* Adjust font-size if you want smaller or larger text */
-}
-
-
 /*===== ABOUT SECTION =====*/
 .about {
   /* General styling for the .about section if needed */
 }
 
-/* Restore a typical centered container for .about__container */
+/* Override .about__container or .bd-grid constraints to allow full width */
 .about__container.bd-grid {
-  max-width: 1200px; /* Or 1024px, 900px, etc. to match your other sections */
-  margin: 0 auto;    /* Centers the container horizontally */
-  padding: 0 2rem;   /* Side padding so text isn’t flush against the edges */
-  display: block;    /* Single-column block layout */
+  max-width: none !important;  /* Remove any fixed max-width */
+  width: 100% !important;      /* Stretch full width */
+  margin: 0 !important;        /* Remove auto-centering margin */
+  padding: 0 2rem !important;  /* Optional side padding */
+  display: block !important;   /* Override any grid/flex if you prefer a single column */
 }
 
 .about__text {
-  text-align: left; /* Or justify if you prefer fully justified text */
-  line-height: 1.6; /* Improves readability */
+  text-align: left;  /* Explicitly left-aligns the paragraph text */
 }
 
 /*===== TRANSFORMATION SECTION =====*/
@@ -276,25 +262,25 @@ img {
 .transformation__heading {
   text-align: center;
   font-size: 1.5rem;
-  margin-top: 2rem;    
-  margin-bottom: 1rem; 
+  margin-top: 2rem;    /* Space above each heading */
+  margin-bottom: 1rem; /* Space below heading before images/video */
   color: var(--second-color);
 }
 
 /* Horizontal row of images + arrows */
 .transformation__gallery {
   display: flex;
-  flex-wrap: wrap;        
-  align-items: center;    
-  justify-content: center;
-  gap: 1rem;              
-  margin-bottom: 2rem;    
+  flex-wrap: wrap;           /* Wrap if screen too small */
+  align-items: center;       /* Vertically center images/arrows */
+  justify-content: center;   /* Center them horizontally */
+  gap: 1rem;                 /* Space between images/arrows */
+  margin-bottom: 2rem;       /* Space below the gallery before next heading */
 }
 
 /* Force each image to be 200px wide, preserving aspect ratio */
 .transformation__img {
-  width: 200px;      
-  height: auto;      
+  width: 200px;      /* Fixes image width */
+  height: auto;      /* Maintains aspect ratio */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
@@ -310,13 +296,13 @@ img {
 .transformation__video-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; /* Space after the video if more content follows */
 }
 
-/* Optional video styling */
+/* Optional video styling class if you need it */
 .transformation__video {
-  max-width: 600px;
-  width: 100%;
+  max-width: 600px;  
+  width: 100%;       
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
