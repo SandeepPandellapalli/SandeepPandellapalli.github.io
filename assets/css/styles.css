@@ -240,120 +240,90 @@ img {
   /* General styling for the .about section if needed */
 }
 
-/* Override .about__container or .bd-grid constraints to allow full width */
+/* Center the container horizontally, but keep a max-width */
 .about__container.bd-grid {
-  max-width: none !important;  /* Remove any fixed max-width */
-  width: 100% !important;      /* Stretch full width */
-  margin: 0 !important;        /* Remove auto-centering margin */
-  padding: 0 2rem !important;  /* Optional side padding */
-  display: block !important;   /* Override any grid/flex if you prefer a single column */
+  max-width: 1200px; /* Or another width that matches your site */
+  margin: 0 auto;    /* Centers container on the page */
+  padding: 0 2rem;
+  display: block;    /* Single-column layout */
 }
 
+/* Right-align the paragraph text */
 .about__text {
-  text-align: left;  /* Explicitly left-aligns the paragraph text */
+  text-align: right;
+  line-height: 1.6;
 }
 
-/*===== TRANSFORMATION SECTION =====*/
+/*===== TRANSFORMATION SECTION (unchanged) =====*/
 .transformation__section {
-  margin-top: 2rem; /* Spacing above the transformation section */
+  margin-top: 2rem;
 }
-
-/* Headings: "From This" & "To This" */
 .transformation__heading {
   text-align: center;
   font-size: 1.5rem;
-  margin-top: 2rem;    /* Space above each heading */
-  margin-bottom: 1rem; /* Space below heading before images/video */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   color: var(--second-color);
 }
-
-/* Horizontal row of images + arrows */
 .transformation__gallery {
   display: flex;
-  flex-wrap: wrap;           /* Wrap if screen too small */
-  align-items: center;       /* Vertically center images/arrows */
-  justify-content: center;   /* Center them horizontally */
-  gap: 1rem;                 /* Space between images/arrows */
-  margin-bottom: 2rem;       /* Space below the gallery before next heading */
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
-
-/* Force each image to be 200px wide, preserving aspect ratio */
 .transformation__img {
-  width: 200px;      /* Fixes image width */
-  height: auto;      /* Maintains aspect ratio */
+  width: 200px;
+  height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
-
-/* Arrows between images */
 .transformation__arrow {
   font-size: 2rem;
   color: var(--first-color);
   font-weight: bold;
 }
-
-/* Video container: center the video */
 .transformation__video-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem; /* Space after the video if more content follows */
+  margin-bottom: 2rem;
 }
-
-/* Optional video styling class if you need it */
 .transformation__video {
-  max-width: 600px;  
-  width: 100%;       
+  max-width: 600px;
+  width: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-
-
-/* ===== Media Queries for Smaller Screens ===== */
-
-/* For tablets and below (max-width: 768px) */
+/* Media Queries for smaller screens (unchanged) */
 @media (max-width: 768px) {
-
-  /* Reduce side padding, allow more room for text */
   .about__container.bd-grid {
     padding: 0 1rem;
   }
-
-  /* Slightly shrink the transformation images */
   .transformation__img {
-    width: 160px; /* Adjust as needed */
+    width: 160px;
   }
-
-  /* Arrows can stay, but if you want them smaller, do: */
   .transformation__arrow {
     font-size: 1.5rem;
   }
 }
-
-/* For phones and very small screens (max-width: 480px) */
 @media (max-width: 480px) {
-
-  /* Stack images vertically and hide arrows, or reduce them further */
   .transformation__gallery {
-    flex-direction: column; 
+    flex-direction: column;
   }
-
   .transformation__arrow {
-    display: none; 
-    /* or font-size: 1.2rem if you still want them, just smaller */
+    display: none;
   }
-
-  /* Make images a comfortable size for small screens */
   .transformation__img {
-    width: 70%;     /* e.g., 70% of the container width */
-    max-width: 250px; 
+    width: 70%;
+    max-width: 250px;
   }
-  
-  /* Adjust video width if needed */
   .transformation__video-container {
     padding: 0 1rem;
   }
 }
+
 
 
 /*===== EXPERIENCE SECTION =====*/
