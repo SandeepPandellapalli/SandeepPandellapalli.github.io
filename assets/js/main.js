@@ -1,4 +1,4 @@
-/*===== MENU SHOW =====*/ 
+/*===== MENU SHOW =====*/
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId)
@@ -35,7 +35,7 @@ const scrollActive = () =>{
         
         if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
             sectionsClass.classList.add('active-link')
-        }else{
+        } else {
             sectionsClass.classList.remove('active-link')
         }                                                    
     })
@@ -51,6 +51,7 @@ const sr = ScrollReveal({
   // reset: true
 });
 
+// Global ScrollReveal calls (not inside DOMContentLoaded yet)
 sr.reveal('.home__data, .about__img');
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img', {
   delay: 200
@@ -64,21 +65,22 @@ sr.reveal('.skills__data, .work__img, .contact__input', {
 
 // Reveal the skills categories more quickly
 sr.reveal('.skills__category', {
-  interval: 50 // Lower interval -> faster sequence
+  interval: 50
 });
 
 // Reveal the headings a bit sooner
 sr.reveal('.skills__heading', {
-  delay: 300  // Reduced from 500
+  delay: 300
 });
 
 // Reveal each skill button faster
 sr.reveal('.skill__button', {
-  interval: 30, // Faster stagger
-  delay: 400    // Reduced from 600
+  interval: 30,
+  delay: 400
 });
 
-ScrollReveal().reveal('.experience__item', {
+// Reveal the experience items
+sr.reveal('.experience__item', {
   distance: '50px',
   duration: 800,
   easing: 'ease-in-out',
@@ -86,8 +88,9 @@ ScrollReveal().reveal('.experience__item', {
   interval: 200
 });
 
-/*===== VIDEO VOLUME CONTROL (20%) =====*/
+/*===== VIDEO VOLUME CONTROL (20%) & Additional Reveals =====*/
 document.addEventListener('DOMContentLoaded', () => {
+  // Adjust volume once the DOM is ready
   const gokartVideo = document.getElementById('gokartVideo');
   if (gokartVideo) {
     gokartVideo.addEventListener('play', () => {
@@ -95,14 +98,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-//Revealing the certifications section items
-sr.reveal('.certifications__item', {
- interval: 100 // Reveals each certification item sequentially with a small delay
-});
+  // Reveal the certifications section items
+  sr.reveal('.certifications__item', {
+    interval: 100
+  });
 
-});
-
-// NEW: Reveal the "From This / To This" elements
+  // NEW: Reveal the "From This / To This" elements
   sr.reveal('.transformation__heading, .transformation__arrow, .transformation__img, .transformation__video-container', {
     distance: '50px',
     duration: 800,
@@ -111,4 +112,3 @@ sr.reveal('.certifications__item', {
     interval: 200
   });
 });
-
