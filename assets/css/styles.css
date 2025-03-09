@@ -236,67 +236,92 @@ img {
 
 /*===== ABOUT SECTION =====*/
 
-/* The outer 'about' section can remain as is, 
-   just focusing on the transformation section below. */
-
-/*===== TRANSFORMATION SECTION (GoKart Progress) =====*/
-.transformation__section {
-  margin-top: 2rem; /* Spacing above the transformation section */
-}
-
-/* Headings: "From This" & "To This" */
-.transformation__heading {
-  text-align: center;
-  font-size: 1.5rem;
-  margin-top: 2rem;        /* Space above each heading */
-  margin-bottom: 1rem;     /* Space below the heading before images/video */
-  color: var(--second-color); 
-}
-
-/* Horizontal row of images + arrows */
-.transformation__gallery {
+.my-card {
   display: flex;
-  align-items: center;
+  align-items: stretch; /* Ensures left & right columns share height if two columns */
+  background: linear-gradient(135deg, #f9f9f9, #ffffff);
+  border-left: 4px solid var(--first-color); /* Same blue used throughout your site */
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.my-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Left column (logo container) */
+.my-card__left {
+  flex: 0 0 220px; /* Fixed width for consistent layout */
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;  /* Center logo vertically */
   justify-content: center;
-  flex-wrap: wrap;   /* Wrap on smaller screens */
-  gap: 1rem;         /* Space between images/arrows */
-  margin-bottom: 2rem; /* Space below the gallery before the next heading */
 }
 
-/* Make each image smaller and maintain aspect ratio */
-.transformation__img {
-  width: 200px;       /* Keep them small: 200px wide */
-  height: auto;       /* Maintain aspect ratio */
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  /* Remove object-fit if you don’t want any cropping */
-  /* object-fit: cover; */
+/* Optional logo styling */
+.my-card__logo {
+  max-width: 200px; 
+  height: auto;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+.my-card__logo:hover {
+  transform: scale(1.02);
 }
 
-/* Arrows between images */
-.transformation__arrow {
-  font-size: 2rem;
-  color: var(--first-color);
+/* Right column (text content) */
+.my-card__right {
+  flex: 1; /* Occupies remaining space */
+}
+
+/* Title styling */
+.my-card__title {
+  font-size: 1.2rem;
   font-weight: bold;
+  color: var(--second-color); /* Darker text color from your theme */
+  margin-bottom: 0.5rem;
 }
 
-/* Video container: center the video */
-.transformation__video-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem; /* Space below the video if there's more content after */
+/* Subtitle or position styling */
+.my-card__subtitle {
+  display: inline-block;
+  background-color: var(--first-color); /* Blue background */
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 0.5rem; /* Space after the subtitle if more text follows */
 }
 
-/* Video styling (optional) */
-.transformation__video {
-  max-width: 600px;  /* Constrain video on large screens */
-  width: 100%;       /* Responsive scaling on smaller devices */
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+/* Paragraph or list styling */
+.my-card__right p {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
 }
 
+/* Responsive for smaller screens */
+@media screen and (max-width: 768px) {
+  .my-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .my-card__left {
+    margin-bottom: 1rem;
+    margin-right: 0;
+    width: 100%;
+    justify-content: center; /* Center the logo horizontally */
+  }
+  .my-card__right {
+    width: 100%;
+  }
+}
 
-/*===== EXPERIENCE SECTION =====*/
 
 /*===== EXPERIENCE SECTION =====*/
 .experience {
