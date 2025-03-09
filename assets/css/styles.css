@@ -173,6 +173,49 @@ img {
   background-color: var(--first-color);
 }
 
+/* For mobile screens (max-width: 767px) */
+@media screen and (max-width: 767px) {
+  /* The mobile nav menu slides in from the right */
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;      /* Hidden off-screen initially */
+    width: 80%;        /* How wide the drawer is */
+    height: 100vh;     /* Full viewport height */
+    background-color: var(--second-color);
+    padding: 2rem;
+    transition: 0.5s;
+    z-index: 999;      /* Ensures menu is on top */
+    overflow-y: auto;  /* Scroll if content is too tall */
+  }
+
+  /* When .show is toggled, slide in from the right */
+  .show {
+    right: 0;
+  }
+
+  /* Nav list as a vertical column */
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* Space between nav items */
+    margin-top: 2rem;
+  }
+
+  /* Remove big bottom margins on mobile if you want them closer */
+  .nav__item {
+    margin-bottom: 0;
+  }
+
+  /* White text inside the mobile drawer */
+  .nav__link {
+    color: #fff;
+    font-size: 1.1rem; /* Slightly larger if you like */
+  }
+}
+
+
 /*=== Show menu ===*/
 .show {
   right: 0;
