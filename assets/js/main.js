@@ -73,6 +73,15 @@ sr.reveal('.home__img', {
   easing: 'ease-in-out',
   // reset: false,  // If you only want it once
 });
+
+ScrollReveal().reveal('.home__blob-img', {
+  origin: 'top',
+  distance: '40px',
+  duration: 800,    // Shorter animation
+  delay: 50,        // Very small initial wait
+  opacity: 0
+});
+
 // Reveal the skills categories more quickly
 sr.reveal('.skills__category', {
   interval: 50
