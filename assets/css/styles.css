@@ -234,46 +234,60 @@ img {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
 }
 
-/* ===== ABOUT =====*/
+/*===== ABOUT SECTION =====*/
+
+/* The outer 'about' section can remain as is, 
+   just focusing on the transformation section below. */
+
 /*===== TRANSFORMATION SECTION (GoKart Progress) =====*/
 .transformation__section {
   margin-top: 2rem; /* Spacing above the transformation section */
 }
 
-.transformation__heading {
-  text-align: center;
-  font-size: 1.5rem;      /* Adjust heading size */
-  margin-bottom: 1rem;
-  margin-top: 2rem;       /* Spacing above each heading */
-  color: var(--second-color); /* Or use your preferred color */
-}
-
-/* Horizontal row of images + arrows */
+/* Headings: "From This" & "To This" */
 .transformation__heading {
   text-align: center;
   font-size: 1.5rem;
-  margin-top: 2rem;   /* Space from previous content */
-  margin-bottom: 1rem;/* Space from heading to gallery/video */
-  color: var(--second-color);
+  margin-top: 2rem;        /* Space above each heading */
+  margin-bottom: 1rem;     /* Space below the heading before images/video */
+  color: var(--second-color); 
 }
 
-/* Apply the same bottom margin to both the images and video */
-.transformation__gallery,
-.transformation__video-container {
+/* Horizontal row of images + arrows */
+.transformation__gallery {
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 2rem; /* Ensures uniform space before the next heading */
+  flex-wrap: wrap;   /* Wrap on smaller screens */
+  gap: 1rem;         /* Space between images/arrows */
+  margin-bottom: 2rem; /* Space below the gallery before the next heading */
+}
+
+/* Make each image smaller and maintain aspect ratio */
+.transformation__img {
+  width: 200px;       /* Keep them small: 200px wide */
+  height: auto;       /* Maintain aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  /* Remove object-fit if you don’t want any cropping */
+  /* object-fit: cover; */
 }
 
 /* Arrows between images */
 .transformation__arrow {
   font-size: 2rem;
-  color: var(--first-color); /* Or another accent color */
+  color: var(--first-color);
   font-weight: bold;
 }
 
+/* Video container: center the video */
+.transformation__video-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem; /* Space below the video if there's more content after */
+}
 
-/* Video styling */
+/* Video styling (optional) */
 .transformation__video {
   max-width: 600px;  /* Constrain video on large screens */
   width: 100%;       /* Responsive scaling on smaller devices */
