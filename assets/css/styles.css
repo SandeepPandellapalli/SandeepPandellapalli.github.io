@@ -461,68 +461,47 @@ img {
   color: var(--second-color);
 }
 
-/* ===== EDUCATION SECTION ===== */
+/*===== EDUCATION SECTION =====*/
 .education {
   padding: 2rem 0;
+  /* Center the heading or style as you prefer */
+  text-align: center;
 }
 
-/* Each “row” in the Education section */
-.education__row {
+/* Container holds both items side by side */
+.education__container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem; /* spacing between top and bottom rows */
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1200px; /* Adjust if needed */
+  margin: 0 auto;    /* Centers the container */
+  flex-wrap: nowrap; /* Keeps them side by side; remove if you want wrapping on smaller screens */
 }
 
-/* Left column text is left-aligned, right column text is right-aligned */
-.education__left,
-.education__right {
-  flex-basis: 40%;
+/* Each education item is styled similarly to your "experience" or "certifications" */
+.education__item {
+  flex: 1 1 45%; /* Each takes about half the container width */
+  background: linear-gradient(135deg, #f9f9f9, #ffffff);
+  border-left: 4px solid var(--first-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  text-align: center; /* Center the text and logo */
+  margin-bottom: 1rem;
 }
 
-.education__left {
-  text-align: left;
+.education__item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-.education__right {
-  text-align: right;
-}
-
-/* Middle column to hold the horizontal line and dot */
-.education__mid {
-  flex-basis: 20%;
-  position: relative;
-  height: 2px; /* line thickness */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* The horizontal line */
-.education__line {
-  width: 100%;
-  height: 2px;
-  background-color: #E01584; /* Pink or any accent color you want */
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* The dot in the center of the line */
-.education__dot {
-  width: 16px;
-  height: 16px;
-  background-color: #E01584; /* Same accent color */
-  border-radius: 50%;
-  z-index: 1; /* Ensures it sits above the line */
-}
-
-/* Text styles for date, degree, major */
+/* Year, Degree, Major text */
 .education__year {
   font-size: var(--normal-font-size);
-  color: var(--second-color);
   font-weight: var(--font-semi);
+  color: var(--second-color);
   margin-bottom: 0.5rem;
 }
 
@@ -533,17 +512,26 @@ img {
   margin-bottom: 0.3rem;
 }
 
-/* University logos and text */
+/* Logo styling */
 .education__logo {
-  max-width: 120px; /* adjust as needed */
-  margin-bottom: 0.5rem;
+  width: 120px;    /* Adjust to fit your design */
+  margin: 1rem auto; 
+  display: block;  /* Centers the logo horizontally */
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+.education__logo:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* University Name and Location */
 .education__univ-name {
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi);
   color: var(--second-color);
   margin-bottom: 0.2rem;
+  text-transform: uppercase; /* optional for a consistent style */
 }
 
 .education__location {
@@ -551,33 +539,17 @@ img {
   color: var(--second-color);
 }
 
-/* Responsive behavior for smaller screens */
+/* Responsive: Stack vertically on smaller screens */
 @media screen and (max-width: 768px) {
-  .education__row {
-    flex-direction: column;
-    text-align: center;
-    margin-bottom: 2rem;
+  .education__container {
+    flex-wrap: wrap; /* Items will wrap to next line */
+    gap: 1rem;
   }
-
-  .education__left,
-  .education__right {
-    flex-basis: auto;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
-  .education__mid {
-    width: 100%;
-    flex-basis: auto;
-    height: 2px;
-    margin: 1rem 0;
-  }
-
-  /* Hide or adjust the dot on small screens if desired */
-  .education__dot {
-    display: none;
+  .education__item {
+    flex: 1 1 100%; /* Each item takes full width on mobile */
   }
 }
+
 
 
 
