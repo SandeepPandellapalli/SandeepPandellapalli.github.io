@@ -399,6 +399,68 @@ img {
   }
 }
 
+/*===== EDUCTAION SECTION =====*/
+.education {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.education__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.education__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #f9f9f9, #ffffff);
+  border-left: 4px solid var(--first-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.education__item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.education__logo {
+  display: block;
+  margin: 0 auto 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 200px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.education__logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.education__logo:hover img {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.education__details {
+  text-align: center;
+}
+
+.education__text {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi);
+  color: var(--second-color);
+}
+
 
 
 /*===== EXPERIENCE SECTION =====*/
