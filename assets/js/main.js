@@ -98,6 +98,18 @@ sr.reveal('.experience__item', {
   interval: 200
 });
 
+/*===== REVEAL EDUCATION SECTION =====*/
+// Place this snippet alongside your other sr.reveal() calls
+
+sr.reveal('.education__item', {
+  distance: '50px',
+  duration: 800,
+  easing: 'ease-in-out',
+  origin: 'bottom',
+  interval: 200
+});
+
+
 /*===== VIDEO VOLUME CONTROL (20%) & Additional Reveals =====*/
 document.addEventListener('DOMContentLoaded', () => {
   // Adjust volume once the DOM is ready
