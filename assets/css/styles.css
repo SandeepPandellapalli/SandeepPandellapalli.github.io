@@ -399,7 +399,7 @@ img {
   }
 }
 
-/*===== EDUCTAION SECTION =====*/
+/*===== EDUCATION SECTION =====*/
 .education {
   padding: 2rem 0;
   text-align: center;
@@ -460,6 +460,125 @@ img {
   font-weight: var(--font-semi);
   color: var(--second-color);
 }
+
+/* ===== EDUCATION SECTION ===== */
+.education {
+  padding: 2rem 0;
+}
+
+/* Each “row” in the Education section */
+.education__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem; /* spacing between top and bottom rows */
+}
+
+/* Left column text is left-aligned, right column text is right-aligned */
+.education__left,
+.education__right {
+  flex-basis: 40%;
+}
+
+.education__left {
+  text-align: left;
+}
+
+.education__right {
+  text-align: right;
+}
+
+/* Middle column to hold the horizontal line and dot */
+.education__mid {
+  flex-basis: 20%;
+  position: relative;
+  height: 2px; /* line thickness */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The horizontal line */
+.education__line {
+  width: 100%;
+  height: 2px;
+  background-color: #E01584; /* Pink or any accent color you want */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* The dot in the center of the line */
+.education__dot {
+  width: 16px;
+  height: 16px;
+  background-color: #E01584; /* Same accent color */
+  border-radius: 50%;
+  z-index: 1; /* Ensures it sits above the line */
+}
+
+/* Text styles for date, degree, major */
+.education__year {
+  font-size: var(--normal-font-size);
+  color: var(--second-color);
+  font-weight: var(--font-semi);
+  margin-bottom: 0.5rem;
+}
+
+.education__degree,
+.education__major {
+  font-size: var(--smaller-font-size);
+  color: var(--second-color);
+  margin-bottom: 0.3rem;
+}
+
+/* University logos and text */
+.education__logo {
+  max-width: 120px; /* adjust as needed */
+  margin-bottom: 0.5rem;
+}
+
+.education__univ-name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi);
+  color: var(--second-color);
+  margin-bottom: 0.2rem;
+}
+
+.education__location {
+  font-size: var(--smaller-font-size);
+  color: var(--second-color);
+}
+
+/* Responsive behavior for smaller screens */
+@media screen and (max-width: 768px) {
+  .education__row {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .education__left,
+  .education__right {
+    flex-basis: auto;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .education__mid {
+    width: 100%;
+    flex-basis: auto;
+    height: 2px;
+    margin: 1rem 0;
+  }
+
+  /* Hide or adjust the dot on small screens if desired */
+  .education__dot {
+    display: none;
+  }
+}
+
 
 
 
