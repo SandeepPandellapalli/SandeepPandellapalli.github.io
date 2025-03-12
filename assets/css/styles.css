@@ -510,6 +510,8 @@ img {
   font-size: var(--smaller-font-size);
   color: var(--second-color);
   margin-bottom: 0.3rem;
+  font-weight: 700; /* or "bold" */
+
 }
 
 /* Logo styling */
